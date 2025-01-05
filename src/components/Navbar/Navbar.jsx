@@ -38,8 +38,8 @@ const Navbar = () => {
           <div className="flex py-5 justify-between items-center">
             {/* navbar start */}
             <div className="">
-              <a className="text-3xl font-semibold text-primaryColor" href="#">
-                Hasinur .
+              <a className="text-3xl font-semibold " href="#">
+                Hasinur <span className="text-primaryColor">.</span>
               </a>
             </div>
             {/* navbar end */}

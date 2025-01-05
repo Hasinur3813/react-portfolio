@@ -8,10 +8,12 @@ import {
 import { Typewriter } from "react-simple-typewriter";
 import myPhoto from "../../assets/myPhoto.jpg";
 import { FaReact, FaNodeJs, FaJs } from "react-icons/fa";
+import { Button } from "antd";
+import Section from "../../layout/Section";
 
 const Hero = () => {
   return (
-    <div className="">
+    <Section>
       <div className=" flex flex-col md:flex-row gap-y-20 items-center container mx-auto px-3  pt-10 sm:pt-20">
         {/* Left Content */}
         <div className=" flex-1 space-y-6">
@@ -41,13 +43,13 @@ const Hero = () => {
           </p>
           {/* CTA */}
           <div className="space-y-4">
-            <button
-              type="button"
-              className="group flex gap-2 items-center px-6 py-3 bg-primaryColor text-white font-semibold text-lg rounded-md shadow-lg hover:shadow-xl transition-shadow duration-200 hover:bg-secondaryColor"
+            <Button
+              type="primary"
+              className="group flex gap-2 items-center px-6 py-6 bg-primaryColor text-white font-semibold text-lg rounded-md shadow-lg hover:shadow-xl transition-shadow duration-200 hover:!bg-secondaryColor"
             >
               <FaDownload className="group-hover:animate-bounce" />{" "}
               <span>Get Resume</span>
-            </button>
+            </Button>
           </div>
           {/* Social Links */}
           <div className="flex space-x-8 text-primaryAccent text-3xl ">
@@ -91,7 +93,7 @@ const Hero = () => {
           />
         </div>
       </div>
-    </div>
+    </Section>
   );
 };
 
