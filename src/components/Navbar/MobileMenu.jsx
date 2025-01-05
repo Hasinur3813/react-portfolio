@@ -5,14 +5,24 @@ import {
   FaTwitter,
   FaXmark,
 } from "react-icons/fa6";
-const MobileMenu = ({ handleCloseMenu, getColorName, showMobileMenu }) => {
+const MobileMenu = ({
+  handleCloseMenu,
+  getColorName,
+  showMobileMenu,
+  handleThemeChange,
+  theme,
+}) => {
   return (
     <div
       className={`${
         showMobileMenu && "!translate-x-0"
-      } transition-transform duration-200 translate-x-full fixed md:hidden top-0 right-0 w-full min-h-screen z-40 bg-black/50 flex justify-end`}
+      }   translate-x-full fixed md:hidden top-0 right-0 w-full min-h-screen z-40 bg-black/50 flex justify-end`}
     >
-      <div className="w-2/3 min-h-screen p-3 bg-white">
+      <div
+        className={`${
+          showMobileMenu && "!opacity-100  transition-all delay-75 duration-300"
+        } opacity-0 w-2/3 min-h-screen p-4 bg-white`}
+      >
         {/* close menu button */}
         <div className="flex justify-end">
           <button type="button" onClick={handleCloseMenu}>
@@ -81,65 +91,70 @@ const MobileMenu = ({ handleCloseMenu, getColorName, showMobileMenu }) => {
         <div className="mt-10">
           <h3 className="text-base font-semibold">Themes</h3>
 
+          {/* toggle theme between dark and light */}
           <div className="flex justify-center items-center gap-3 mt-4">
             <h5 className="text-lg font-bold">Light</h5>
-            <input type="checkbox" className="toggle toggle-lg" />
+
+            <input
+              onChange={handleThemeChange}
+              value={theme}
+              type="checkbox"
+              className="toggle toggle-lg"
+            />
             <h5 className="text-lg font-bold">Dark</h5>
           </div>
+
+          {/* set color theme to the website */}
 
           <div className="mt-10">
             <h3 className="font-semibold text-base">Colors</h3>
 
             <div onClick={getColorName} className="mt-5 flex gap-5 flex-wrap">
               <button
-                name="primary"
-                className="bg-primaryColor w-6 h-6 rounded-full"
-              ></button>
-              <button
-                name="pink"
+                name="#ec4899"
                 className="bg-pink-500 w-6 h-6 rounded-full"
               ></button>
               <button
-                name="violet"
+                name="#8b5cf6"
                 className="bg-violet-500 w-6 h-6 rounded-full"
               ></button>
               <button
-                name="green"
+                name="#22c55e"
                 className="bg-green-500 w-6 h-6 rounded-full"
               ></button>
               <button
-                name="teal"
+                name="#0d9488 "
                 className="bg-teal-600 w-6 h-6 rounded-full"
               ></button>
               <button
-                name="blue"
-                className="bg-blue-400 w-6 h-6 rounded-full"
+                name="#2563eb"
+                className="bg-blue-600 w-6 h-6 rounded-full"
               ></button>
               <button
-                name="yellow"
+                name="#eab308"
                 className="bg-yellow-500 w-6 h-6 rounded-full"
               ></button>
             </div>
+          </div>
+        </div>
 
-            {/* social links */}
+        {/* social links */}
 
-            <div className="mt-10">
-              <h3 className="text-base font-semibold">Social</h3>
-              <div className="mt-5 flex space-x-8 text-primaryAccent text-2xl ">
-                <a href="#" className="text-primaryColor">
-                  <FaGithub />
-                </a>
-                <a href="#" className="text-primaryColor">
-                  <FaLinkedin />
-                </a>
-                <a href="#" className="text-primaryColor">
-                  <FaTwitter />
-                </a>
-                <a href="#" className="text-primaryColor">
-                  <FaFacebook />
-                </a>
-              </div>
-            </div>
+        <div className="mt-10">
+          <h3 className="text-base font-semibold">Social</h3>
+          <div className="mt-5 flex space-x-8 text-primaryAccent text-3xl ">
+            <a href="#" className="text-primaryColor">
+              <FaGithub />
+            </a>
+            <a href="#" className="text-primaryColor">
+              <FaLinkedin />
+            </a>
+            <a href="#" className="text-primaryColor">
+              <FaTwitter />
+            </a>
+            <a href="#" className="text-primaryColor">
+              <FaFacebook />
+            </a>
           </div>
         </div>
       </div>

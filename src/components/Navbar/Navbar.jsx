@@ -6,6 +6,7 @@ import Navlink from "./Navlink";
 
 const Navbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [theme, setTheme] = useState("light");
 
   const handleCloseMenu = () => {
     setShowMobileMenu(false);
@@ -17,12 +18,19 @@ const Navbar = () => {
     console.log(color);
   };
 
+  const handleThemeChange = (e) => {
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
+    console.log(e.target.value);
+  };
+
   return (
     <>
       <MobileMenu
         getColorName={getColorName}
         handleCloseMenu={handleCloseMenu}
         showMobileMenu={showMobileMenu}
+        handleThemeChange={handleThemeChange}
+        theme={theme}
       />
 
       <div className="shadow-sm bg-primaryColor/5">

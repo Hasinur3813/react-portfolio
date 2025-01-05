@@ -15,7 +15,7 @@ const Hero = () => {
       <div className=" flex flex-col md:flex-row gap-y-20 items-center container mx-auto px-3  pt-10 sm:pt-20">
         {/* Left Content */}
         <div className=" flex-1 space-y-6">
-          <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold text-gray-800">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800">
             <span className="animate-greeting inline-block">👋</span> Hi, I am a{" "}
             <span className="text-primaryColor">
               <Typewriter
@@ -50,7 +50,7 @@ const Hero = () => {
             </button>
           </div>
           {/* Social Links */}
-          <div className="flex space-x-8 text-primaryAccent text-2xl ">
+          <div className="flex space-x-8 text-primaryAccent text-3xl ">
             <a href="#" className="hover:text-primaryColor">
               <FaGithub />
             </a>
