@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { RiMenu2Line } from "react-icons/ri";
 import MobileMenu from "./MobileMenu";
 import { useState } from "react";
@@ -6,31 +5,16 @@ import Navlink from "./Navlink";
 
 const Navbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
-  const [theme, setTheme] = useState("light");
 
   const handleCloseMenu = () => {
     setShowMobileMenu(false);
   };
 
-  const getColorName = (e) => {
-    // TODO: change theme color by clicking the color
-    const color = e.target.name;
-    console.log(color);
-  };
-
-  const handleThemeChange = (e) => {
-    setTheme((prev) => (prev === "light" ? "dark" : "light"));
-    console.log(e.target.value);
-  };
-
   return (
     <>
       <MobileMenu
-        getColorName={getColorName}
         handleCloseMenu={handleCloseMenu}
         showMobileMenu={showMobileMenu}
-        handleThemeChange={handleThemeChange}
-        theme={theme}
       />
 
       <div className="shadow-sm bg-primaryColor/5">
