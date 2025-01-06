@@ -15,6 +15,7 @@ const Themes = ({ className }) => {
           onChange={handleThemeChange}
           value={theme}
           type="checkbox"
+          checked={theme === "dark"}
           className="toggle toggle-lg"
         />
         <h5 className="text-lg font-bold">Dark</h5>

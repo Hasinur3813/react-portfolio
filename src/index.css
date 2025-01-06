@@ -3,3 +3,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primaryColor: #00d2d3;
+    --color-secondaryColor: #00d3c4;
+    --color-offWhite: #f9f9f9;
+    --color-darkGray: #0f172a;
+    --color-lightGray: #ffffff;
+    --color-muted: #4b5563;
+  }
+}

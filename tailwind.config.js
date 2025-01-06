@@ -3,13 +3,16 @@ import daisyui from "daisyui";
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
-        primaryColor: "#00d2d3",
-        secondaryColor: "#00D3C4",
-        darkGray: "#0F172A",
-        lightGray: "#F4FDFC",
+        primaryColor: "var(--color-primaryColor)",
+        secondaryColor: "var(--color-secondaryColor)",
+        offWhite: "var(--color-offWhite)",
+        darkGray: "var(--color-darkGray)",
+        lightGray: "var(--color-lightGray)",
+        muted: "var(--color-muted)",
       },
       fontFamily: {
         poppins: ["poppins", "serif"],

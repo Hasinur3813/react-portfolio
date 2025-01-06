@@ -36,7 +36,7 @@ const ActionButtons = () => {
         ref={themeBox}
         className={`${
           showColors && "opacity-100 z-auto pointer-events-auto"
-        } themeControlBox opacity-0 -z-10 pointer-events-none rounded-md bg-base-200 px-6 py-4 absolute -top-72 right-0`}
+        } themeControlBox opacity-0 -z-10 pointer-events-none rounded-md bg-offWhite border px-6 py-4 absolute -top-72 right-0`}
       >
         <Themes className="" />
       </div>
@@ -57,7 +57,7 @@ const ActionButtons = () => {
         {/* Contact through WhatsApp */}
         <div>
           <button type="button" className="">
-            <IoLogoWhatsapp className="text-3xl lg:text-4xl text-[#51c857]" />
+            <IoLogoWhatsapp className="text-5xl lg:text-4xl text-[#51c857]" />
           </button>
         </div>
       </div>

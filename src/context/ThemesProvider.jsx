@@ -1,19 +1,32 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const ThemeContext = createContext(null);
 
 const ThemesProvider = ({ children }) => {
   const [theme, setTheme] = useState("light");
 
+  useEffect(() => {
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme) {
+      setTheme(storedTheme);
+      document.documentElement.classList = storedTheme;
+      return;
+    }
+    setTheme("light");
+  }, [theme]);
+
+  // change theme by toggling
+  const handleThemeChange = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    localStorage.setItem("theme", newTheme);
+    setTheme(newTheme);
+  };
+
+  // change theme by choosing color
   const getColorName = (e) => {
     // TODO: change theme color by clicking the color
     const color = e.target.name;
     console.log(color);
-  };
-
-  const handleThemeChange = (e) => {
-    setTheme((prev) => (prev === "light" ? "dark" : "light"));
-    console.log(e.target.value);
   };
 
   const controller = {

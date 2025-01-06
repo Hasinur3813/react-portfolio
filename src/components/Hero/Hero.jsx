@@ -10,6 +10,8 @@ import myPhoto from "../../assets/myPhoto.jpg";
 import { FaReact, FaNodeJs, FaJs } from "react-icons/fa";
 import { Button } from "antd";
 import Section from "../../layout/Section";
+import Lottie from "lottie-react";
+import developer from "../../assets/developer.json"; // Import your JSON file
 
 const Hero = () => {
   return (
@@ -17,8 +19,9 @@ const Hero = () => {
       <div className=" flex flex-col md:flex-row gap-y-20 items-center container mx-auto px-3  pt-10 sm:pt-20">
         {/* Left Content */}
         <div className=" flex-1 space-y-6">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800">
+          <h1 className="text-3xl leading-relaxed md:text-3xl lg:text-4xl font-bold text-gray-800">
             <span className="animate-greeting inline-block">👋</span> Hi, I am a{" "}
+            <br />{" "}
             <span className="text-primaryColor">
               <Typewriter
                 words={[
@@ -56,7 +59,7 @@ const Hero = () => {
             <a href="#" className="hover:text-primaryColor">
               <FaGithub />
             </a>
-            <a href="#" className="hover:text-primaryColor">
+            <a href="#" className=" hover:text-primaryColor">
               <FaLinkedin />
             </a>
             <a href="#" className="hover:text-primaryColor">
@@ -70,27 +73,28 @@ const Hero = () => {
 
         {/* Right Image */}
         <div className=" relative flex-1 flex justify-center">
+          <Lottie animationData={developer} loop={true} className="w-1/2" />
           {/*setting  technology icon */}
           <div className="absolute">
-            <span className="relative -top-10 -left-32 lg:-left-64">
+            <span className="relative -top-10 -left-20 lg:-left-32">
               <FaReact className="text-[#61DAFB] text-3xl animate-pulse" />
             </span>
             <span className="relative -right-32 sm:-right-40">
               <FaNodeJs className="text-[#68A063] text-3xl animate-pulse" />
             </span>
-            <span className="relative top-44 -left-32 md:-left-44">
+            <span className="relative  -left-32 md:-left-44">
               <FaJs className="text-[#F7DF1E] text-3xl animate-pulse" />
             </span>
           </div>
 
           {/* Blob Effect */}
-          <div className="absolute w-72 h-72 bg-primaryColor/50 rounded-full animate-pulse blur-lg -z-10"></div>
+          {/* <div className="absolute w-72 h-72 bg-primaryColor/50 rounded-full animate-pulse blur-lg -z-10"></div> */}
           {/* Profile Photo */}
-          <img
+          {/* <img
             src={myPhoto}
             alt="Profile"
             className="w-64 -rotate-2 h-64 object-cover rounded-full border-4 ring-primaryColor ring"
-          />
+          /> */}
         </div>
       </div>
     </Section>
