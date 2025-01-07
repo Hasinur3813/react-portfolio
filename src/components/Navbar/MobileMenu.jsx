@@ -16,12 +16,12 @@ const MobileMenu = ({ handleCloseMenu, showMobileMenu }) => {
       <div
         className={`${
           showMobileMenu && "!opacity-100  transition-all delay-75 duration-300"
-        } opacity-0 w-2/3 min-h-screen p-4 bg-white`}
+        } opacity-0 w-2/3 min-h-screen p-4 bg-lightGray dark:bg-darkGray dark:text-lightGray`}
       >
         {/* close menu button */}
         <div className="flex justify-end">
           <button type="button" onClick={handleCloseMenu}>
-            <FaXmark className="hover:rotate-180 transition-transform duration-200 text-3xl text-red-500" />
+            <FaXmark className="hover:rotate-180 transition-transform duration-200 text-3xl text-red" />
           </button>
         </div>
 
@@ -33,7 +33,7 @@ const MobileMenu = ({ handleCloseMenu, showMobileMenu }) => {
           <ul className="mt-4 space-y-2 text-center">
             <li className="group">
               <a
-                className="group-hover:bg-primaryColor/10 text-lg block rounded-md"
+                className="group-hover:bg-accent-hover text-lg block rounded-md"
                 href="http://"
               >
                 Home
@@ -41,7 +41,7 @@ const MobileMenu = ({ handleCloseMenu, showMobileMenu }) => {
             </li>
             <li className="group">
               <a
-                className="group-hover:bg-primaryColor/10 text-lg block rounded-md"
+                className="group-hover:bg-accent-hover text-lg block rounded-md"
                 href="http://"
               >
                 Services
@@ -49,7 +49,7 @@ const MobileMenu = ({ handleCloseMenu, showMobileMenu }) => {
             </li>
             <li className="group">
               <a
-                className="group-hover:bg-primaryColor/10 text-lg block rounded-md"
+                className="group-hover:bg-accent-hover text-lg block rounded-md"
                 href="http://"
               >
                 About Me
@@ -57,7 +57,7 @@ const MobileMenu = ({ handleCloseMenu, showMobileMenu }) => {
             </li>
             <li className="group">
               <a
-                className="group-hover:bg-primaryColor/10 text-lg block rounded-md"
+                className="group-hover:bg-accent-hover text-lg block rounded-md"
                 href="http://"
               >
                 Projects
@@ -65,7 +65,7 @@ const MobileMenu = ({ handleCloseMenu, showMobileMenu }) => {
             </li>
             <li className="group">
               <a
-                className="group-hover:bg-primaryColor/10 text-lg block rounded-md"
+                className="group-hover:bg-accent-hover text-lg block rounded-md"
                 href="http://"
               >
                 Contact Me
@@ -73,7 +73,7 @@ const MobileMenu = ({ handleCloseMenu, showMobileMenu }) => {
             </li>
             <li>
               <button
-                className="mt-5 w-full border-secondaryColor border bg-primaryColor/20 rounded-md px-4 py-2 text-lg font-semibold"
+                className="mt-5 w-full border-secondaryColor border hover:bg-primaryColor hover:text-lightGray rounded-md px-4 py-2 text-lg font-semibold"
                 type="button"
               >
                 Hire me
@@ -84,12 +84,12 @@ const MobileMenu = ({ handleCloseMenu, showMobileMenu }) => {
 
         {/* themes control */}
 
-        <Themes />
+        <Themes className="mt-10" />
         {/* social links */}
 
         <div className="mt-10">
           <h3 className="text-base font-semibold">Social</h3>
-          <div className="mt-5 flex space-x-8 text-primaryAccent text-3xl ">
+          <div className="mt-5 flex space-x-8 text-3xl ">
             <a href="#" className="text-primaryColor">
               <FaGithub />
             </a>

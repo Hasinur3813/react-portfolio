@@ -17,7 +17,7 @@ const Navbar = () => {
         showMobileMenu={showMobileMenu}
       />
 
-      <div className="shadow-sm bg-primaryColor/5">
+      <div className="shadow-md bg-offWhite">
         <div className="container mx-auto px-3">
           <div className="flex py-5 justify-between items-center">
             {/* navbar start */}
@@ -36,7 +36,7 @@ const Navbar = () => {
                 <Navlink path="contact" text="Contact" />
                 <li>
                   <button
-                    className="ms-4 border-secondaryColor border bg-primaryColor/20 rounded-md px-4 py-2 text-lg font-semibold"
+                    className="ms-4 border-secondaryColor border hover:bg-primaryColor rounded-md px-4 py-2 text-lg font-semibold"
                     type="button"
                   >
                     Hire me
@@ -47,7 +47,7 @@ const Navbar = () => {
               {/* hamburger menu */}
               <div className="md:hidden">
                 <button type="button" onClick={() => setShowMobileMenu(true)}>
-                  <RiMenu2Line className="text-3xl bg-primaryColor text-white rounded p-1" />
+                  <RiMenu2Line className="text-3xl bg-primaryColor text-lightGray rounded p-1" />
                 </button>
               </div>
             </div>

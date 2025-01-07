@@ -13,6 +13,9 @@ export default {
         darkGray: "var(--color-darkGray)",
         lightGray: "var(--color-lightGray)",
         muted: "var(--color-muted)",
+        text: "var(--color-text)",
+        red: "var(--color-red)",
+        "accent-hover": "var(--color-accent-hover)",
       },
       fontFamily: {
         poppins: ["poppins", "serif"],

@@ -15,11 +15,11 @@ import developer from "../../assets/developer.json"; // Import your JSON file
 
 const Hero = () => {
   return (
-    <Section>
+    <Section className="">
       <div className=" flex flex-col md:flex-row gap-y-20 items-center container mx-auto px-3  pt-10 sm:pt-20">
         {/* Left Content */}
         <div className=" flex-1 space-y-6">
-          <h1 className="text-3xl leading-relaxed md:text-3xl lg:text-4xl font-bold text-gray-800">
+          <h1 className="text-3xl leading-relaxed md:text-3xl lg:text-4xl font-bold text-darkGray">
             <span className="animate-greeting inline-block">👋</span> Hi, I am a{" "}
             <br />{" "}
             <span className="text-primaryColor">
@@ -39,7 +39,7 @@ const Hero = () => {
             </span>
           </h1>
 
-          <p className="text-lg text-gray-600 leading-relaxed">
+          <p className="text-lg text-muted leading-relaxed">
             A passionate MERN stack developer specializing in creating
             user-friendly web applications. I love crafting elegant solutions to
             complex problems.
@@ -48,7 +48,7 @@ const Hero = () => {
           <div className="space-y-4">
             <Button
               type="primary"
-              className="group flex gap-2 items-center px-6 py-6 bg-primaryColor text-white font-semibold text-lg rounded-md shadow-lg hover:shadow-xl transition-shadow duration-200 hover:!bg-secondaryColor"
+              className="group flex gap-2 items-center px-6 py-6 bg-primaryColor text-lightGray font-semibold text-lg rounded-md shadow-lg hover:shadow-xl transition-shadow duration-200 hover:!bg-secondaryColor"
             >
               <FaDownload className="group-hover:animate-bounce" />{" "}
               <span>Get Resume</span>

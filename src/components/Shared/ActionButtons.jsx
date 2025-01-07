@@ -38,7 +38,7 @@ const ActionButtons = () => {
           showColors && "opacity-100 z-auto pointer-events-auto"
         } themeControlBox opacity-0 -z-10 pointer-events-none rounded-md bg-offWhite border px-6 py-4 absolute -top-72 right-0`}
       >
-        <Themes className="" />
+        <Themes />
       </div>
 
       <div className="space-y-2">
@@ -50,7 +50,7 @@ const ActionButtons = () => {
             type="button"
             className="hover:rotate-180 md:block hidden transition-transform duration-100"
           >
-            <IoSettingsSharp className="text-3xl lg:text-4xl text-primaryColor" />
+            <IoSettingsSharp className="text-5xl lg:text-4xl text-primaryColor" />
           </button>
         </div>
 

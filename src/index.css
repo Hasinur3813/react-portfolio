@@ -12,5 +12,8 @@
     --color-darkGray: #0f172a;
     --color-lightGray: #ffffff;
     --color-muted: #4b5563;
+    --color-text: #101c2c;
+    --color-red: #ef4444;
+    --color-accent-hover: #e5ffff;
   }
 }
