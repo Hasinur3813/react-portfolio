@@ -9,14 +9,18 @@ const ActionButtons = () => {
   const themeBox = useRef(null);
 
   const handleShowColor = () => {
+    console.log("before clicked");
+    console.log(showColors);
     setShowColors((prevState) => !prevState);
-    console.log("clicked");
+    console.log(" after clicked");
   };
 
   // Close menu when clicking outside the themeBox
   useEffect(() => {
     const handleClickOutside = (event) => {
+      console.log(themeBox.current);
       if (themeBox.current && !themeBox.current.contains(event.target)) {
+        console.log("useEffect run");
         setShowColors(false);
       }
     };
@@ -33,6 +37,7 @@ const ActionButtons = () => {
   return (
     <div className="fixed bottom-5 right-5 z-[999]">
       {/* Menu */}
+
       <div
         ref={themeBox}
         className={`${
@@ -46,7 +51,10 @@ const ActionButtons = () => {
         {/* Themes Control */}
         <div>
           <button
-            onClick={handleShowColor}
+            onClick={(e) => {
+              e.stopPropagation();
+              handleShowColor();
+            }}
             type="button"
             className="hover:rotate-180 md:block hidden transition-transform duration-100"
           >

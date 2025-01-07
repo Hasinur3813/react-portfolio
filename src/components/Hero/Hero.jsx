@@ -6,7 +6,6 @@ import {
   FaFacebook,
 } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
-import myPhoto from "../../assets/myPhoto.jpg";
 import { FaReact, FaNodeJs, FaJs } from "react-icons/fa";
 import { Button } from "antd";
 import Section from "../../layout/Section";
@@ -15,7 +14,7 @@ import developer from "../../assets/developer.json"; // Import your JSON file
 
 const Hero = () => {
   return (
-    <Section>
+    <Section className="!py-5">
       <div className=" flex flex-col md:flex-row gap-y-20 items-center container mx-auto px-3  pt-10 sm:pt-20">
         {/* Left Content */}
         <div className=" flex-1 space-y-6">
@@ -86,15 +85,6 @@ const Hero = () => {
               <FaJs className="text-[#F7DF1E] text-3xl animate-pulse" />
             </span>
           </div>
-
-          {/* Blob Effect */}
-          {/* <div className="absolute w-72 h-72 bg-primaryColor/50 rounded-full animate-pulse blur-lg -z-10"></div> */}
-          {/* Profile Photo */}
-          {/* <img
-            src={myPhoto}
-            alt="Profile"
-            className="w-64 -rotate-2 h-64 object-cover rounded-full border-4 ring-primaryColor ring"
-          /> */}
         </div>
       </div>
     </Section>
