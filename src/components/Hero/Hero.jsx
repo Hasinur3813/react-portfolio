@@ -15,7 +15,7 @@ import developer from "../../assets/developer.json"; // Import your JSON file
 
 const Hero = () => {
   return (
-    <Section className="">
+    <Section>
       <div className=" flex flex-col md:flex-row gap-y-20 items-center container mx-auto px-3  pt-10 sm:pt-20">
         {/* Left Content */}
         <div className=" flex-1 space-y-6">
@@ -48,15 +48,15 @@ const Hero = () => {
           <div className="space-y-4">
             <Button
               type="primary"
-              className="group flex gap-2 items-center px-6 py-6 bg-primaryColor text-lightGray font-semibold text-lg rounded-md shadow-lg hover:shadow-xl transition-shadow duration-200 hover:!bg-secondaryColor"
+              className="group flex gap-2 items-center px-6 py-6 hover:!bg-primaryColor border-primaryColor font-semibold text-lg rounded-md shadow-md hover:shadow-xl transition-shadow duration-200 bg-offWhite text-primaryColor"
             >
               <FaDownload className="group-hover:animate-bounce" />{" "}
               <span>Get Resume</span>
             </Button>
           </div>
           {/* Social Links */}
-          <div className="flex space-x-8 text-primaryAccent text-3xl ">
-            <a href="#" className="hover:text-primaryColor">
+          <div className="flex space-x-8 text-primaryColor text-3xl ">
+            <a href="#" className="hover:text-primaryColor shadow-primaryColor">
               <FaGithub />
             </a>
             <a href="#" className=" hover:text-primaryColor">

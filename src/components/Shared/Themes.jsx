@@ -1,7 +1,9 @@
 import useTheme from "../../hooks/useTheme";
+import { Tooltip } from "antd";
+import ThemesColor from "./ThemesColor";
 
 const Themes = ({ className }) => {
-  const { theme, getColorName, handleThemeChange } = useTheme();
+  const { theme, getThemeName, handleThemeChange } = useTheme();
 
   return (
     <div className={`${className}`}>
@@ -26,31 +28,42 @@ const Themes = ({ className }) => {
       <div className="mt-10">
         <h3 className="font-semibold text-base">Colors</h3>
 
-        <div onClick={getColorName} className="mt-5 flex gap-5 flex-wrap">
-          <button
-            name="#ec4899"
-            className="bg-pink-500 w-6 h-6 rounded-full"
-          ></button>
-          <button
-            name="#8b5cf6"
-            className="bg-violet-500 w-6 h-6 rounded-full"
-          ></button>
-          <button
-            name="#22c55e"
-            className="bg-green-500 w-6 h-6 rounded-full"
-          ></button>
-          <button
-            name="#0d9488 "
-            className="bg-teal-600 w-6 h-6 rounded-full"
-          ></button>
-          <button
-            name="#2563eb"
-            className="bg-blue-600 w-6 h-6 rounded-full"
-          ></button>
-          <button
-            name="#eab308"
-            className="bg-yellow-500 w-6 h-6 rounded-full"
-          ></button>
+        <div onClick={getThemeName} className="mt-5 flex gap-5 flex-wrap">
+          <ThemesColor
+            title="Default"
+            colorName="bg-[#00d2d3]"
+            themeName="theme-default"
+          />
+          <ThemesColor
+            title="Pink"
+            colorName="bg-pink-500"
+            themeName="theme-pink"
+          />
+          <ThemesColor
+            title="Violet"
+            colorName="bg-violet-500"
+            themeName="theme-violet"
+          />
+          <ThemesColor
+            title="Green"
+            colorName="bg-green-500"
+            themeName="theme-green"
+          />
+          <ThemesColor
+            title="Teal"
+            colorName="bg-teal-600"
+            themeName="theme-teal"
+          />
+          <ThemesColor
+            title="Blue"
+            colorName="bg-blue-500"
+            themeName="theme-blue"
+          />
+          <ThemesColor
+            title="Yellow"
+            colorName="bg-yellow-500"
+            themeName="theme-yellow"
+          />
         </div>
       </div>
     </div>

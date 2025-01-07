@@ -16,6 +16,7 @@ export default {
         text: "var(--color-text)",
         red: "var(--color-red)",
         "accent-hover": "var(--color-accent-hover)",
+        "bg-secondary": "var(--color-bg-secondary)",
       },
       fontFamily: {
         poppins: ["poppins", "serif"],

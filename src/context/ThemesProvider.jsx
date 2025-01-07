@@ -4,6 +4,7 @@ export const ThemeContext = createContext(null);
 
 const ThemesProvider = ({ children }) => {
   const [theme, setTheme] = useState("light");
+  const [colorName, setColorName] = useState("");
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
@@ -23,16 +24,16 @@ const ThemesProvider = ({ children }) => {
   };
 
   // change theme by choosing color
-  const getColorName = (e) => {
-    // TODO: change theme color by clicking the color
-    const color = e.target.name;
-    console.log(color);
+  const getThemeName = (e) => {
+    const themeName = e.target.name;
+    setColorName(themeName);
   };
 
   const controller = {
     theme,
+    colorName,
     setTheme,
-    getColorName,
+    getThemeName,
     handleThemeChange,
   };
 

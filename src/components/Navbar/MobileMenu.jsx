@@ -73,7 +73,7 @@ const MobileMenu = ({ handleCloseMenu, showMobileMenu }) => {
             </li>
             <li>
               <button
-                className="mt-5 w-full border-secondaryColor border hover:bg-primaryColor hover:text-lightGray rounded-md px-4 py-2 text-lg font-semibold"
+                className="mt-5 w-full border-secondaryColor border text-lightGray bg-primaryColor hover:text-lightGray hover:bg-secondaryColor rounded-md px-4 py-2 text-lg font-semibold"
                 type="button"
               >
                 Hire me

@@ -17,7 +17,7 @@ const Navbar = () => {
         showMobileMenu={showMobileMenu}
       />
 
-      <div className="shadow-md bg-offWhite">
+      <div className="shadow-sm bg-bg-secondary">
         <div className="container mx-auto px-3">
           <div className="flex py-5 justify-between items-center">
             {/* navbar start */}
@@ -36,7 +36,8 @@ const Navbar = () => {
                 <Navlink path="contact" text="Contact" />
                 <li>
                   <button
-                    className="ms-4 border-secondaryColor border hover:bg-primaryColor rounded-md px-4 py-2 text-lg font-semibold"
+                    className="ms-4 border-secondaryColor border 
+                    bg-primaryColor text-lightGray hover:bg-secondaryColor rounded-md px-4 py-2 text-lg font-semibold"
                     type="button"
                   >
                     Hire me

@@ -15,5 +15,72 @@
     --color-text: #101c2c;
     --color-red: #ef4444;
     --color-accent-hover: #e5ffff;
+    --color-bg-secondary: #e6fbfb;
   }
+  * {
+    @apply transition-colors duration-300 ease-in-out;
+  }
+}
+
+/* theme default */
+
+.theme-default {
+  --color-primaryColor: #00d2d3;
+  --color-secondaryColor: #00d3c4;
+  --color-offWhite: #f9f9f9;
+  --color-darkGray: #0f172a;
+  --color-lightGray: #ffffff;
+  --color-muted: #4b5563;
+  --color-text: #101c2c;
+  --color-red: #ef4444;
+  --color-accent-hover: #e5ffff;
+  --color-bg-secondary: #e6fbfb;
+}
+
+/* Theme 1 */
+.theme-pink {
+  --color-primaryColor: #ec4899;
+  --color-secondaryColor: #bd3a7a;
+  --color-accent-hover: #ffe4e6;
+  --color-bg-secondary: #fdedf5;
+}
+
+/* Theme 2 */
+.theme-violet {
+  --color-primaryColor: #8b5cf6;
+  --color-secondaryColor: #a78bfa;
+  --color-accent-hover: #ede9fe;
+  --color-bg-secondary: #f6f3ff;
+}
+
+/* Theme 3 */
+.theme-green {
+  --color-primaryColor: #22c55e;
+  --color-secondaryColor: #4ade80;
+  --color-accent-hover: #dcfce7;
+  --color-bg-secondary: #e9f9ef;
+}
+
+/* Theme 4 */
+.theme-teal {
+  --color-primaryColor: #0d9488;
+  --color-secondaryColor: #14b8a6;
+  --color-accent-hover: #ccfbf1;
+  --color-bg-secondary: #e7f4f3;
+}
+
+/* Theme 5 */
+.theme-blue {
+  --color-primaryColor: #3b82f6;
+  --color-secondaryColor: #60a5fa;
+  --color-accent-hover: #dbeafe;
+  --color-bg-secondary: #ebf3fe;
+}
+
+/* Theme 6 */
+.theme-yellow {
+  --color-primaryColor: #eab308;
+  --color-secondaryColor: #facc15;
+  --color-accent-hover: #fef3c7;
+  --color-bg-secondary: #fdf7e6;
 }
