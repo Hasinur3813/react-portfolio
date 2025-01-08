@@ -4,13 +4,13 @@ import Section from "../../layout/Section";
 
 const AboutMe = () => {
   return (
-    <Section className="">
+    <Section>
       <div className="container mx-auto px-4 flex flex-col-reverse lg:flex-row items-center gap-24 lg:gap-10">
         {/* left content */}
         <div className="lg:flex-1 relative flex justify-center">
           {/* Blob Background */}
-          <div className="absolute w-60 h-60 bg-primaryColor rounded-full blur-3xl -z-10"></div>
-          <div className="absolute w-64 h-64 bg-bg-secondary rounded-full blur-2xl -z-20"></div>
+          <div className="absolute w-60 h-60 bg-primaryColor rounded-full blur-3xl "></div>
+          <div className="absolute w-64 h-64 bg-bg-secondary rounded-full blur-2xl "></div>
 
           {/* Profile Photo */}
           <img

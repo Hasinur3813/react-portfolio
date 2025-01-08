@@ -1,6 +1,6 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
-import Section from "../layout/Section";
+
+import Section from "../../layout/Section";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Pagination, Autoplay, Navigation } from "swiper/modules";
@@ -22,7 +22,7 @@ console.log(reversed); // Output: "!dlroW ,olleH"
 
 const HowICode = () => {
   return (
-    <Section>
+    <Section className="bg-offWhite">
       <div className="container mx-auto px-4  grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Left Content */}
         <div className="space-y-6">

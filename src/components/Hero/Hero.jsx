@@ -14,7 +14,7 @@ import developer from "../../assets/developer.json"; // Import your JSON file
 
 const Hero = () => {
   return (
-    <Section className="!py-5">
+    <Section className="!py-5 mt-12">
       <div className=" flex flex-col md:flex-row gap-y-20 items-center container mx-auto px-3  pt-10 sm:pt-20">
         {/* Left Content */}
         <div className=" flex-1 space-y-6">
