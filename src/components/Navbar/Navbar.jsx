@@ -17,7 +17,7 @@ const Navbar = () => {
         showMobileMenu={showMobileMenu}
       />
 
-      <div className="shadow-sm bg-bg-secondary">
+      <div className="shadow-sm bg-bg-secondary dark:bg-darkGray">
         <div className="container mx-auto px-3">
           <div className="flex py-5 justify-between items-center">
             {/* navbar start */}

@@ -3,8 +3,10 @@ import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import Section from "../layout/Section";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay, Navigation } from "swiper/modules";
+import "swiper/css/navigation";
 import "swiper/css/pagination";
+
 const codeExample = `
 // Define a function to reverse a string
 function reverseString(str) {
@@ -19,12 +21,6 @@ console.log(reversed); // Output: "!dlroW ,olleH"
 `;
 
 const HowICode = () => {
-  const pagination = {
-    clickable: true,
-    renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + (index + 1) + "</span>";
-    },
-  };
   return (
     <Section>
       <div className="container mx-auto px-4  grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -55,42 +51,31 @@ const HowICode = () => {
           <Swiper
             spaceBetween={50}
             slidesPerView={1}
-            pagination={pagination}
+            pagination={{
+              clickable: true,
+            }}
             autoplay={{
-              delay: 3000,
+              delay: 4000,
               disableOnInteraction: false,
               pauseOnMouseEnter: true,
             }}
-            modules={[Autoplay, Pagination]}
-            className="mySwiper"
+            modules={[Autoplay, Pagination, Navigation]}
           >
             <SwiperSlide>
               {" "}
-              <SyntaxHighlighter
-                language="javascript"
-                style={atomDark}
-                className="rounded-lg"
-              >
+              <SyntaxHighlighter language="javascript" className="rounded-lg">
                 {codeExample}
               </SyntaxHighlighter>
             </SwiperSlide>
             <SwiperSlide>
               {" "}
-              <SyntaxHighlighter
-                language="javascript"
-                style={atomDark}
-                className="rounded-lg"
-              >
+              <SyntaxHighlighter language="javascript" className="rounded-lg">
                 {codeExample}
               </SyntaxHighlighter>
             </SwiperSlide>
             <SwiperSlide>
               {" "}
-              <SyntaxHighlighter
-                language="javascript"
-                style={atomDark}
-                className="rounded-lg"
-              >
+              <SyntaxHighlighter language="javascript" className="rounded-lg">
                 {codeExample}
               </SyntaxHighlighter>
             </SwiperSlide>
