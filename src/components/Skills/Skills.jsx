@@ -1,34 +1,34 @@
+import { Divider } from "antd";
+
 const skills = [
   {
     category: "Frontend",
     technologies: [
-      { name: "React", icon: "🌐" },
-      { name: "Tailwind CSS", icon: "🎨" },
-      { name: "HTML5", icon: "📄" },
-      { name: "CSS3", icon: "🎭" },
+      "html5",
+      "css3",
+      "bootstrap",
+      "tailwindcss",
+      "javascript",
+      "react",
+      "daisy UI",
+      "ant design",
+      "react awesome reveal",
+      "swiper.js",
     ],
   },
   {
     category: "Backend",
-    technologies: [
-      { name: "Node.js", icon: "🖥️" },
-      { name: "Express.js", icon: "🚀" },
-      { name: "MongoDB", icon: "🍃" },
-    ],
+    technologies: ["node.js", "express.js", "mongodb", "JWT", "firebase"],
   },
   {
     category: "Tools",
-    technologies: [
-      { name: "Git", icon: "🔧" },
-      { name: "VS Code", icon: "📘" },
-      { name: "Postman", icon: "📨" },
-    ],
+    technologies: ["git", "gitHub", "VS Code", "postman"],
   },
 ];
 
 const Skills = () => {
   return (
-    <section className="py-16 ">
+    <section className="py-16 bg-bg-secondary">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
@@ -41,29 +41,30 @@ const Skills = () => {
         </div>
 
         {/* Skills Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <dizv className="flex flex-col  gap-y-20">
           {skills.map((skill, index) => (
-            <div
-              key={index}
-              className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-200"
-            >
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                {skill.category}
-              </h3>
-              <ul className="space-y-2">
+            <div key={index}>
+              <Divider
+                orientation={skill.category === "Backend" ? "right" : "left"}
+              >
+                <h3 className="text-2xl font-bold text-darkGray">
+                  {skill.category}
+                </h3>
+              </Divider>
+
+              <div className="flex flex-wrap justify-center items-center gap-5">
                 {skill.technologies.map((tech, idx) => (
-                  <li
+                  <p
                     key={idx}
-                    className="flex items-center gap-3 text-gray-700 hover:text-primaryColor transition-colors"
+                    className="flex flex-col items-center justify-center gap-y-2 font-semibold  bg-gradient-to-r from-primaryColor to-secondaryColor px-3 py-2 rounded-md text-white shadow-primaryColor "
                   >
-                    <span className="text-2xl">{tech.icon}</span>
-                    <span>{tech.name}</span>
-                  </li>
+                    {tech}
+                  </p>
                 ))}
-              </ul>
+              </div>
             </div>
           ))}
-        </div>
+        </dizv>
       </div>
     </section>
   );
