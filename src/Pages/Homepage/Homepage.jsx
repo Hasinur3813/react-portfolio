@@ -1,6 +1,7 @@
 import AboutMe from "../../components/AboutMe/AboutMe";
 import Hero from "../../components/Hero/Hero";
 import HowICode from "../../components/HowICode/HowICode";
+import RecentWork from "../../components/RecentWork/RecentWork";
 import Skills from "../../components/Skills/Skills";
 
 const Homepage = () => {
@@ -10,6 +11,7 @@ const Homepage = () => {
       <AboutMe />
       <HowICode />
       <Skills />
+      <RecentWork />
     </div>
   );
 };
