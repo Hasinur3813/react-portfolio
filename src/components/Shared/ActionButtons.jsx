@@ -9,18 +9,13 @@ const ActionButtons = () => {
   const themeBox = useRef(null);
 
   const handleShowColor = () => {
-    console.log("before clicked");
-    console.log(showColors);
     setShowColors((prevState) => !prevState);
-    console.log(" after clicked");
   };
 
   // Close menu when clicking outside the themeBox
   useEffect(() => {
     const handleClickOutside = (event) => {
-      console.log(themeBox.current);
       if (themeBox.current && !themeBox.current.contains(event.target)) {
-        console.log("useEffect run");
         setShowColors(false);
       }
     };
