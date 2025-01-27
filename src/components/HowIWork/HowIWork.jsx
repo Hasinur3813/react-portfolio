@@ -1,4 +1,3 @@
-import React from "react";
 import { FaSearch, FaRegLightbulb, FaCode } from "react-icons/fa";
 
 const HowIWork = () => {
@@ -27,7 +26,7 @@ const HowIWork = () => {
   ];
 
   return (
-    <section className="bg-lightGray py-16">
+    <section className="bg-lightGray dark:bg-darkGray py-16">
       <div className="container mx-auto px-4">
         {/* Section Title */}
         <div className="text-center mb-12">
@@ -42,7 +41,7 @@ const HowIWork = () => {
           {steps.map((step) => (
             <div
               key={step.id}
-              className="bg-white border border-primaryColor shadow-lg rounded-lg p-6 text-center hover:shadow-xl hover:shadow-primaryColor transition-shadow duration-200"
+              className="bg-white border border-primaryColor shadow-md rounded-lg p-6 text-center hover:shadow-lg hover:shadow-primaryColor transition-shadow duration-200"
             >
               {/* Icon */}
               <div className="mb-4 flex justify-center">{step.icon}</div>

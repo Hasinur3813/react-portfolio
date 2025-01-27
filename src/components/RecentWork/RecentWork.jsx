@@ -1,8 +1,5 @@
-import { FaExternalLinkAlt } from "react-icons/fa";
-import web from "../../assets/pet.png";
 import Button from "../Shared/Button";
 import { useState } from "react";
-import { Modal } from "antd";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import ProjectModal from "../ProjectModal/ProjectModal";
 const projects = [
@@ -79,7 +76,7 @@ const RecentWork = () => {
         </div>
 
         {/* Projects Grid Container */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-20">
           {projects.map((project) => (
             <ProjectCard
               key={project.id}

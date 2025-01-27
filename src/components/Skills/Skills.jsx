@@ -28,7 +28,7 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section className="py-16 bg-bg-secondary">
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
@@ -41,7 +41,7 @@ const Skills = () => {
         </div>
 
         {/* Skills Cards */}
-        <dizv className="flex flex-col  gap-y-20">
+        <dizv className="flex flex-col  gap-y-2">
           {skills.map((skill, index) => (
             <div key={index}>
               <Divider
@@ -52,7 +52,11 @@ const Skills = () => {
                 </h3>
               </Divider>
 
-              <div className="flex flex-wrap justify-center items-center gap-5">
+              <div
+                className={`flex flex-wrap justify-center max-w-lg ${
+                  skill.category === "Backend" && "ml-auto"
+                } bg-offWhite p-6 rounded-lg items-center gap-5 border`}
+              >
                 {skill.technologies.map((tech, idx) => (
                   <p
                     key={idx}

@@ -1,6 +1,6 @@
 import { FaExternalLinkAlt } from "react-icons/fa";
 import Button from "../Shared/Button";
-import web from "../../assets/web.png";
+import web from "../../assets/pet.png";
 
 const ProjectCard = ({ project, handleOpenModal }) => {
   return (
@@ -40,7 +40,7 @@ const ProjectCard = ({ project, handleOpenModal }) => {
         </div>
 
         {/* Buttons */}
-        <div className="flex justify-between items-end flex-grow mt-4">
+        <div className="flex justify-center md:justify-between gap-x-2 md:gap-x-0 items-end flex-grow  mt-4">
           {/* Details Button */}
           <Button
             className={
