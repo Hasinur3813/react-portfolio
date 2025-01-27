@@ -84,3 +84,22 @@
   --color-accent-hover: #fef3c7;
   --color-bg-secondary: #fdf7e6;
 }
+
+.active {
+  color: var(--color-primaryColor);
+  transition: color 200ms !important;
+  position: relative !important;
+}
+
+.active::before {
+  content: "" !important;
+  position: absolute !important;
+  bottom: -4px !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  height: 4px !important;
+  background-color: var(--color-primaryColor);
+  border-radius: 2px !important;
+  transition: all 200ms !important;
+}

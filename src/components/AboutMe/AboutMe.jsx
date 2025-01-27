@@ -45,10 +45,7 @@ const AboutMe = () => {
             </li>
           </ul>
           {/* CTA Button */}
-          <button
-            onClick={() => (window.location.href = "/about")}
-            className="group flex items-center gap-2 px-6 py-3 bg-primaryColor text-lightGray text-lg font-semibold rounded-md shadow-lg hover:shadow-xl hover:bg-secondaryColor transition-all duration-200"
-          >
+          <button className="group flex items-center gap-2 px-6 py-3 bg-primaryColor text-lightGray text-lg font-semibold rounded-md shadow-lg hover:shadow-xl hover:bg-secondaryColor transition-all duration-200">
             Know More{" "}
             <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-200" />
           </button>

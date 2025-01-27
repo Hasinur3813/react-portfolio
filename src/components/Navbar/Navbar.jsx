@@ -1,7 +1,8 @@
 import { RiMenu2Line } from "react-icons/ri";
 import MobileMenu from "./MobileMenu";
 import { useState } from "react";
-import Navlink from "./Navlink";
+
+import MenuLink from "./Navlink";
 
 const Navbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -29,11 +30,10 @@ const Navbar = () => {
             {/* navbar end */}
             <div className="flex items-center">
               <ul className=" space-x-4 text-base items-center hidden md:flex">
-                <Navlink path="home" text="Home" />
-                <Navlink path="services" text="Services" />
-                <Navlink path="projects" text="Project" />
-                <Navlink path="about" text="About Me" />
-                <Navlink path="contact" text="Contact" />
+                <MenuLink path="/" text="Home" />
+                <MenuLink path="/projects" text="Project" />
+                <MenuLink path="/about-me" text="About Me" />
+                <MenuLink path="/contact" text="Contact" />
                 <li>
                   <button
                     className="ms-4 border-secondaryColor border 
