@@ -1,12 +1,22 @@
-import { Form, Input, Button } from "antd";
+import { Form, Input, Button, notification } from "antd";
 import { useState } from "react";
 import { FaLinkedin, FaGithub, FaPhone, FaEnvelope } from "react-icons/fa";
+import grid from "../../assets/dot-grid.png";
 
 import { IoIosSend } from "react-icons/io";
 const Contact = () => {
   const [loading, setLoading] = useState(false);
+  const [form] = Form.useForm();
 
   const onFinish = (values) => {
+    setLoading(true);
+    setTimeout(() => {
+      notification.success({
+        message: "Thank you for your message!",
+      });
+      setLoading(false);
+      form.resetFields();
+    }, 3000);
     console.log("Form values:", values);
   };
 
@@ -15,10 +25,13 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-16 dark:bg-darkGray">
+    <section className="py-16 dark:bg-darkGray relative bg-lightGray">
+      <div className="absolute top-0 right-0 hidden sm:block">
+        <img src={grid} alt="shape" />
+      </div>
       <div className="container mx-auto px-4">
         {/* Section Title */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-20">
           <h2 className="text-3xl font-bold text-primaryColor">Get in Touch</h2>
           <p className="text-darkGray">Feel free to reach out anytime!</p>
         </div>
@@ -29,9 +42,10 @@ const Contact = () => {
             <Form
               name="contact-form"
               layout="vertical"
+              form={form}
               onFinish={onFinish}
               onFinishFailed={onFinishFailed}
-              className="bg-white lg:max-w-lg w-full border border-primaryColor shadow-lg rounded-tr-badge rounded-bl-badge p-8"
+              className="bg-white lg:max-w-lg w-full border-2 border-primaryColor shadow-lg rounded-tr-badge rounded-bl-badge p-8"
             >
               <Form.Item
                 label="Name"
@@ -82,7 +96,7 @@ const Contact = () => {
                 <Input
                   className="hover:border-primaryColor focus:border-primaryColor focus:shadow-md"
                   size="large"
-                  placeholder="Your Email"
+                  placeholder="Your Subject"
                 />
               </Form.Item>
 
@@ -118,22 +132,26 @@ const Contact = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="w-full space-y-6 text-lightGray">
-            <h3 className="text-2xl font-semibold">Contact Info</h3>
+          <div className="w-full space-y-6 ">
+            <h3 className="text-2xl text-primaryColor font-semibold">
+              Contact Info
+            </h3>
             <div className="space-y-4">
               <div className="flex items-center space-x-4">
-                <FaPhone className="text-blue-600 text-2xl" />
-                <span>+123-456-7890</span>
+                <FaPhone className="text-darkGray text-2xl" />
+                <span>+880 1773 06 1332</span>
               </div>
               <div className="flex items-center space-x-4">
-                <FaEnvelope className="text-blue-600 text-2xl" />
-                <span>email@example.com</span>
+                <FaEnvelope className="text-darkGray text-2xl" />
+                <span>hasinur.rahman1332@gmail.com</span>
               </div>
             </div>
 
             {/* Social Links */}
             <div className="space-y-4">
-              <h4 className="text-lg font-medium">Follow Me</h4>
+              <h4 className="text-lg font-medium text-primaryColor">
+                Follow Me
+              </h4>
               <div className="flex space-x-6">
                 <a
                   href="#"
