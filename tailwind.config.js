@@ -30,6 +30,9 @@ export default {
       animation: {
         greeting: "greeting 1s linear infinite",
       },
+      backgroundImage: {
+        coding: "url(./assets/coding.jpg)",
+      },
     },
   },
   plugins: [daisyui],
