@@ -6,7 +6,7 @@ import useTheme from "../hooks/useTheme";
 const RootLayout = () => {
   const { colorName } = useTheme();
   return (
-    <div className={`${colorName} font-poppins bg-lightGray dark:bg-darkGray`}>
+    <div className={`${colorName} font-poppins `}>
       <ActionButtons />
       <Navbar />
       <Outlet />

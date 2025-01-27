@@ -15,7 +15,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-16">
+    <section className="py-16 dark:bg-darkGray">
       <div className="container mx-auto px-4">
         {/* Section Title */}
         <div className="text-center mb-12">
@@ -94,7 +94,7 @@ const Contact = () => {
                 ]}
               >
                 <Input.TextArea
-                  className="hover:border-primaryColor border border-primaryColor focus:shadow-md"
+                  className="hover:border-primaryColor focus:shadow-md"
                   showCount
                   placeholder="Your Message"
                   rows={4}

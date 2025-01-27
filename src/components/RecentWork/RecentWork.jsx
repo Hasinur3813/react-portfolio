@@ -65,7 +65,7 @@ const RecentWork = () => {
   };
 
   return (
-    <section className="py-16">
+    <section className="py-16 bg-lightGray dark:bg-darkGray">
       <div className="container mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-8">

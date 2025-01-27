@@ -22,7 +22,7 @@ console.log(reversed); // Output: "!dlroW ,olleH"
 
 const HowICode = () => {
   return (
-    <Section className="bg-offWhite">
+    <Section className="bg-lightGray dark:bg-darkGray">
       <div className="container mx-auto px-4  grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Left Content */}
         <div className="space-y-6">
