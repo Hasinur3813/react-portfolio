@@ -14,7 +14,9 @@ import developer from "../../assets/developer.json"; // Import your JSON file
 
 const Hero = () => {
   return (
-    <Section className="py-16 dark:bg-darkGray mt-12">
+    <Section className="py-16 dark:bg-darkGray mt-12 relative overflow-hidden">
+      <div className="absolute w-[400px] h-[400px] bg-primaryColor rounded-full z-10 blur-2xl top-20 -right-44 opacity-45 "></div>
+
       <div className=" flex flex-col md:flex-row gap-y-20 items-center container mx-auto px-3  pt-10 sm:pt-20">
         {/* Left Content */}
         <div className=" flex-1 space-y-6">
