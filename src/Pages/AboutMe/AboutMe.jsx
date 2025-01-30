@@ -44,6 +44,11 @@ const AboutMe = () => {
               web applications.
             </p>
             <p className="text-muted mt-4">
+              My attraction to technology began when I was in school. I learned
+              the basics of HTML and CSS during my college years, but I
+              professionally started coding after my graduation.
+            </p>
+            <p className="text-muted mt-4">
               I specialize in front-end development using modern technologies
               like <strong>React</strong>,<strong> Tailwind CSS</strong>,{" "}
               <strong>Ant Design</strong>,<strong> DaisyUI</strong>, and{" "}
@@ -60,15 +65,74 @@ const AboutMe = () => {
 
         {/* bottom content */}
         <div className="mt-32">
-          <h2 className="text-2xl font-semibold mb-4 text-primary">
-            My Journey
-          </h2>
-          <p className="text-gray-600">
-            My journey into web development started with curiosity and a passion
-            for technology. Over the years, I honed my skills in front-end
-            development, mastering technologies like React, Tailwind, and Framer
-            Motion.
-          </p>
+          <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+            <li>
+              <div className="timeline-middle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="#ec4899"
+                  className="h-5 w-5"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div className="timeline-start mb-10 md:text-end">
+                <h2 className="text-2xl font-bold mb-4 text-primaryColor">
+                  My Journey
+                </h2>
+                <p className="text-muted">
+                  My journey into web development started with curiosity and a
+                  passion for technology. Over the years, I honed my skills in
+                  front-end development with basic backend knowledge, mastering
+                  technologies like <strong>React</strong>,{" "}
+                  <strong>Tailwind</strong>, <strong>Node</strong>,{" "}
+                  <strong>Express</strong>, <strong>Mongodb</strong> etc.
+                </p>
+                <p className="text-muted mt-4">
+                  My attraction to technology began when I was in school. I
+                  learned the basics of HTML and CSS during my college years,
+                  but I professionally started coding after my graduation.
+                </p>
+              </div>
+              <hr />
+            </li>
+
+            <li>
+              <hr />
+              <div className="timeline-middle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="#ec4899"
+                  className="h-5 w-5"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div className="timeline-end md:mb-10">
+                <h2 className="text-2xl font-bold mb-4 text-primaryColor">
+                  My Tech Stack
+                </h2>
+                <p className="text-muted">Technologies I work with:</p>
+                <ul className="list-disc list-inside mt-3 text-gray-600">
+                  <li>React.js & Next.js</li>
+                  <li>Tailwind CSS & Ant Design</li>
+                  <li>Framer Motion for animations</li>
+                  <li>Node.js & Express.js (Basic Backend Knowledge)</li>
+                </ul>
+              </div>
+              <hr />
+            </li>
+          </ul>
         </div>
       </div>
     </section>
