@@ -12,10 +12,10 @@ const AboutMe = () => {
       </div>
 
       {/* content */}
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 overflow-hidden">
         {/* top content */}
-        <div className="flex justify-between gap-10 py-10 mt-5">
-          <div className="w-1/2 flex justify-center h-fit relative">
+        <div className="flex flex-col md:flex-row justify-between gap-10 py-10 mt-5">
+          <div className="md:w-1/2 w-full flex justify-center h-fit relative">
             {/* blob */}
             <div className="absolute w-[600px] h-[600px] -top-40 -z-10">
               <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -34,7 +34,7 @@ const AboutMe = () => {
           </div>
 
           {/* content */}
-          <div className="w-1/2 ms-auto">
+          <div className="md:w-1/2 w-full ms-auto">
             <h2 className="text-3xl font-bold mb-4 text-primaryColor">
               Who I Am?
             </h2>
@@ -43,11 +43,7 @@ const AboutMe = () => {
               hands-on experience in creating visually appealing and interactive
               web applications.
             </p>
-            <p className="text-muted mt-4">
-              My attraction to technology began when I was in school. I learned
-              the basics of HTML and CSS during my college years, but I
-              professionally started coding after my graduation.
-            </p>
+
             <p className="text-muted mt-4">
               I specialize in front-end development using modern technologies
               like <strong>React</strong>,<strong> Tailwind CSS</strong>,{" "}
@@ -123,12 +119,89 @@ const AboutMe = () => {
                   My Tech Stack
                 </h2>
                 <p className="text-muted">Technologies I work with:</p>
-                <ul className="list-disc list-inside mt-3 text-gray-600">
+                <ul className="list-disc list-inside mt-3 text-muted">
                   <li>React.js & Next.js</li>
                   <li>Tailwind CSS & Ant Design</li>
-                  <li>Framer Motion for animations</li>
-                  <li>Node.js & Express.js (Basic Backend Knowledge)</li>
+                  <li>
+                    Framer Motion, AOS, React Awesome Reveal for animations
+                  </li>
+                  <li>Node.js & Express.js for backend</li>
+                  <li>Mongodb for database</li>
                 </ul>
+              </div>
+              <hr />
+            </li>
+            <li>
+              <hr />
+              <div className="timeline-middle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="#ec4899"
+                  className="h-5 w-5"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div className="timeline-start md:text-end md:mb-10">
+                <h2 className="text-2xl font-bold mb-4 text-primaryColor">
+                  How I Work
+                </h2>
+                <p className="text-muted">
+                  My workflow involves deep research, planning, coding, and
+                  optimization. I believe in writing clean, scalable, and
+                  maintainable code to build high-quality web applications.
+                </p>
+                <p className="text-muted mt-4">
+                  I start by understanding the project requirements and
+                  conducting thorough research. Then, I create a detailed plan
+                  and break down the tasks into manageable chunks. During the
+                  coding phase, I focus on writing clean and efficient code,
+                  following best practices and design patterns. Finally, I
+                  perform rigorous testing and optimization to ensure the
+                  application runs smoothly and efficiently.
+                </p>
+                <p className="text-muted mt-4">
+                  I also believe in continuous learning and improvement. I
+                  regularly review my code and seek feedback from peers to
+                  identify areas for improvement. This iterative process helps
+                  me stay updated with the latest trends and technologies in web
+                  development.
+                </p>
+              </div>
+              <hr />
+            </li>
+            <li>
+              <hr />
+              <div className="timeline-middle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="#ec4899"
+                  className="h-5 w-5"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div className="timeline-end md:mb-10">
+                <h2 className="text-2xl font-bold mb-4 text-primaryColor">
+                  Let&apos;s Connect!
+                </h2>
+                <p className="text-muted mb-4">
+                  Looking to collaborate or hire me? Let&apos;s build something
+                  amazing together!
+                </p>
+                <button className="px-6 py-3 bg-primaryColor text-white rounded-md shadow-md hover:bg-secondaryColor transition">
+                  Contact Me
+                </button>
               </div>
               <hr />
             </li>
@@ -157,7 +230,7 @@ export default AboutMe;
 //         <h1 className="text-4xl font-bold text-gray-800">
 //           Hi, I'm [Your Name] 👋
 //         </h1>
-//         <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
+//         <p className="text-lg text-muted mt-4 max-w-2xl mx-auto">
 //           A passionate front-end developer with a keen eye for design and a love
 //           for crafting interactive web experiences.
 //         </p>
@@ -174,7 +247,7 @@ export default AboutMe;
 //             <h2 className="text-2xl font-semibold mb-4 text-primary">
 //               My Journey
 //             </h2>
-//             <p className="text-gray-600">
+//             <p className="text-muted">
 //               My journey into web development started with curiosity and a
 //               passion for technology. Over the years, I honed my skills in
 //               front-end development, mastering technologies like React,
@@ -193,8 +266,8 @@ export default AboutMe;
 //             <h2 className="text-2xl font-semibold mb-4 text-primary">
 //               My Tech Stack
 //             </h2>
-//             <p className="text-gray-600">Technologies I work with:</p>
-//             <ul className="list-disc list-inside mt-3 text-gray-600">
+//             <p className="text-muted">Technologies I work with:</p>
+//             <ul className="list-disc list-inside mt-3 text-muted">
 //               <li>React.js & Next.js</li>
 //               <li>Tailwind CSS & Ant Design</li>
 //               <li>Framer Motion for animations</li>
@@ -215,7 +288,7 @@ export default AboutMe;
 //             <h2 className="text-2xl font-semibold mb-4 text-primary">
 //               How I Work
 //             </h2>
-//             <p className="text-gray-600">
+//             <p className="text-muted">
 //               My workflow involves deep research, planning, coding, and
 //               optimization. I believe in writing clean, scalable, and
 //               maintainable code to build high-quality web applications.
@@ -233,7 +306,7 @@ export default AboutMe;
 //             <h2 className="text-2xl font-semibold mb-4 text-primary">
 //               Let's Connect!
 //             </h2>
-//             <p className="text-gray-600 mb-4">
+//             <p className="text-muted mb-4">
 //               Looking to collaborate or hire me? Let's build something amazing
 //               together!
 //             </p>
