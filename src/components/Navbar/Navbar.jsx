@@ -3,6 +3,7 @@ import MobileMenu from "./MobileMenu";
 import { useState } from "react";
 
 import MenuLink from "./Navlink";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -23,9 +24,9 @@ const Navbar = () => {
           <div className="flex py-5 justify-between items-center">
             {/* navbar start */}
             <div className="">
-              <a className="text-3xl font-semibold " href="#">
+              <Link to={"/"} className="text-3xl font-semibold ">
                 Hasinur <span className="text-primaryColor">.</span>
-              </a>
+              </Link>
             </div>
             {/* navbar end */}
             <div className="flex items-center">

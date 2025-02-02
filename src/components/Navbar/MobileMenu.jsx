@@ -6,14 +6,34 @@ import {
   FaXmark,
 } from "react-icons/fa6";
 import Themes from "../Shared/Themes";
+import { Link } from "react-router-dom";
+import { useRef } from "react";
+
 const MobileMenu = ({ handleCloseMenu, showMobileMenu }) => {
+  const menuRef = useRef(null);
+
+  const handleCloseMobileMenu = (e) => {
+    const menu = menuRef.current;
+    if (
+      e.target.contains(menu) ||
+      e.target.tagName === "A" ||
+      e.target.tagName === "BUTTON"
+    ) {
+      handleCloseMenu();
+    }
+  };
+
   return (
+    // whole page container
     <div
+      onClick={handleCloseMobileMenu}
       className={`${
         showMobileMenu && "!translate-x-0"
       }   translate-x-full fixed md:hidden top-0 right-0 w-full min-h-screen z-40 bg-black/50 flex justify-end`}
     >
+      {/* mobile menu */}
       <div
+        ref={menuRef}
         className={`${
           showMobileMenu && "!opacity-100  transition-all delay-75 duration-300"
         } opacity-0 w-2/3 min-h-screen p-4 bg-lightGray dark:bg-darkGray dark:text-lightGray`}
@@ -32,45 +52,38 @@ const MobileMenu = ({ handleCloseMenu, showMobileMenu }) => {
           {/* nav links */}
           <ul className="mt-4 space-y-2 text-center">
             <li className="group">
-              <a
+              <Link
+                to={"/"}
                 className="group-hover:bg-accent-hover text-lg block rounded-md"
-                href="http://"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li className="group">
-              <a
+              <Link
+                to={"/about-me"}
                 className="group-hover:bg-accent-hover text-lg block rounded-md"
-                href="http://"
               >
-                Services
-              </a>
+                About me
+              </Link>
             </li>
             <li className="group">
-              <a
+              <Link
+                to={"/projects"}
                 className="group-hover:bg-accent-hover text-lg block rounded-md"
-                href="http://"
-              >
-                About Me
-              </a>
-            </li>
-            <li className="group">
-              <a
-                className="group-hover:bg-accent-hover text-lg block rounded-md"
-                href="http://"
               >
                 Projects
-              </a>
+              </Link>
             </li>
             <li className="group">
-              <a
+              <Link
+                to={"/contact"}
                 className="group-hover:bg-accent-hover text-lg block rounded-md"
-                href="http://"
               >
-                Contact Me
-              </a>
+                Contact
+              </Link>
             </li>
+
             <li>
               <button
                 className="mt-5 w-full border-secondaryColor border text-lightGray bg-primaryColor hover:text-lightGray hover:bg-secondaryColor rounded-md px-4 py-2 text-lg font-semibold"
