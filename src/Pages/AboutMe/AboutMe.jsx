@@ -1,23 +1,22 @@
 import myPhoto from "../../assets/myPhoto.jpg";
+import PageHeader from "../../components/PageHeader/PageHeader";
 
 const AboutMe = () => {
   return (
-    <section className="py-16 mt-5">
+    <section className="py-16 md:mt-5">
       {/* heading */}
-      <div className="py-20 bg-gradient-to-tr from-primaryColor to-secondaryColor text-center">
-        <h2 className="font-semibold text-xl mb-2 text-lightGray">About Me</h2>
-        <p className="tracking-wider font-bold text-4xl text-lightGray">
-          Let&apos;s build something together
-        </p>
-      </div>
+      <PageHeader
+        heading={"About Me"}
+        title={"Let's build something together"}
+      />
 
       {/* content */}
       <div className="container mx-auto px-4 overflow-hidden">
         {/* top content */}
-        <div className="flex flex-col md:flex-row justify-between gap-10 py-10 mt-5">
+        <div className="flex flex-col md:flex-row justify-between gap-10 py-10 mt-20">
           <div className="md:w-1/2 w-full flex justify-center h-fit relative">
             {/* blob */}
-            <div className="absolute w-[600px] h-[600px] -top-40 -z-10">
+            <div className="absolute w-[500px] h-[500px] -top-32 -z-10">
               <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                 <path
                   fill="#FF0066"
@@ -29,12 +28,12 @@ const AboutMe = () => {
             <img
               src={myPhoto}
               alt="Hasinu Rahman"
-              className="w-64 rounded-t-full ring-2 ring-primaryColor ring-offset-4"
+              className="w-64 rounded-full ring-2 ring-primaryColor ring-offset-4"
             />
           </div>
 
           {/* content */}
-          <div className="md:w-1/2 w-full ms-auto">
+          <div className="md:w-1/2 mt-20 md:mt-0 w-full ms-auto">
             <h2 className="text-3xl font-bold mb-4 text-primaryColor">
               Who I Am?
             </h2>

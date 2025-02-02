@@ -7,6 +7,7 @@ import Homepage from "./Pages/Homepage/Homepage";
 import ThemesProvider from "./context/ThemesProvider";
 import Projects from "./Pages/Projects/Projects";
 import AboutMe from "./Pages/AboutMe/AboutMe";
+import ProjectDetails from "./Pages/ProjectDetails/ProjectDetails";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/about-me",
         element: <AboutMe />,
+      },
+      {
+        path: "/project/:title",
+        element: <ProjectDetails />,
       },
     ],
   },

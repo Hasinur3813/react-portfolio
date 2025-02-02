@@ -1,4 +1,4 @@
-const ProjectModal = ({ selectedProject, setSelectedProject }) => {
+const ProjectModal = ({ selectedProject }) => {
   return (
     <dialog id="my_modal_2" className="modal">
       <div className="modal-box">
@@ -32,7 +32,7 @@ const ProjectModal = ({ selectedProject, setSelectedProject }) => {
         </p>
       </div>
       <form method="dialog" className="modal-backdrop">
-        <button onClick={() => setSelectedProject(null)}>close</button>
+        <button>close</button>
       </form>
     </dialog>
   );

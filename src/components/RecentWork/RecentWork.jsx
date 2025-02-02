@@ -1,7 +1,7 @@
 import Button from "../Shared/Button";
-import { useState } from "react";
+
 import ProjectCard from "../ProjectCard/ProjectCard";
-import ProjectModal from "../ProjectModal/ProjectModal";
+
 const projects = [
   {
     id: 1,
@@ -54,13 +54,6 @@ const projects = [
 ];
 
 const RecentWork = () => {
-  const [selectedProject, setSelectedProject] = useState(null);
-
-  const handleOpenModal = (project) => {
-    document.getElementById("my_modal_2").showModal();
-    setSelectedProject(project);
-  };
-
   return (
     <section className="py-16 bg-lightGray dark:bg-darkGray">
       <div className="container mx-auto px-4">
@@ -78,24 +71,13 @@ const RecentWork = () => {
         {/* Projects Grid Container */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-20">
           {projects.map((project) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              handleOpenModal={handleOpenModal}
-            />
+            <ProjectCard key={project.id} project={project} />
           ))}
         </div>
 
         <div className="mt-16 text-center">
           <Button>View All Project</Button>
         </div>
-
-        {/* modal for source code links */}
-
-        <ProjectModal
-          selectedProject={selectedProject}
-          setSelectedProject={setSelectedProject}
-        />
       </div>
     </section>
   );
