@@ -1,5 +1,5 @@
 import useTheme from "../../hooks/useTheme";
-import { Tooltip } from "antd";
+
 import ThemesColor from "./ThemesColor";
 
 const Themes = ({ className }) => {
@@ -28,6 +28,7 @@ const Themes = ({ className }) => {
       <div className="mt-10">
         <h3 className="font-semibold text-base">Colors</h3>
 
+        {/* get the theme name by clicking on the theme color and set it to the entire website */}
         <div onClick={getThemeName} className="mt-5 flex gap-5 flex-wrap">
           <ThemesColor
             title="Default"

@@ -26,7 +26,9 @@ const ThemesProvider = ({ children }) => {
   // change theme by choosing color
   const getThemeName = (e) => {
     const themeName = e.target.name;
-    setColorName(themeName);
+    if (themeName) {
+      setColorName(themeName);
+    }
   };
 
   const controller = {

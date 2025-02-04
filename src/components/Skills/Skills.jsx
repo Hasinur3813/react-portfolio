@@ -41,7 +41,7 @@ const Skills = () => {
         </div>
 
         {/* Skills Cards */}
-        <dizv className="flex flex-col  gap-y-2">
+        <div className="flex flex-col  gap-y-2">
           {skills.map((skill, index) => (
             <div key={index}>
               <Divider
@@ -68,7 +68,7 @@ const Skills = () => {
               </div>
             </div>
           ))}
-        </dizv>
+        </div>
       </div>
     </section>
   );

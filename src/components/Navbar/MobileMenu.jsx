@@ -14,11 +14,7 @@ const MobileMenu = ({ handleCloseMenu, showMobileMenu }) => {
 
   const handleCloseMobileMenu = (e) => {
     const menu = menuRef.current;
-    if (
-      e.target.contains(menu) ||
-      e.target.tagName === "A" ||
-      e.target.tagName === "BUTTON"
-    ) {
+    if (e.target.contains(menu) || e.target.tagName === "A") {
       handleCloseMenu();
     }
   };
