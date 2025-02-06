@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { IoLogoWhatsapp } from "react-icons/io";
+import { FaWhatsapp } from "react-icons/fa";
 import { IoSettingsSharp } from "react-icons/io5";
 import Themes from "./Themes";
 
@@ -53,15 +53,20 @@ const ActionButtons = () => {
             type="button"
             className="hover:rotate-180 md:block hidden transition-transform duration-100"
           >
-            <IoSettingsSharp className="text-5xl lg:text-4xl text-primaryColor" />
+            <IoSettingsSharp className="text-5xl text-primaryColor" />
           </button>
         </div>
 
         {/* Contact through WhatsApp */}
         <div>
-          <button type="button" className="">
-            <IoLogoWhatsapp className="text-5xl lg:text-4xl text-[#51c857]" />
-          </button>
+          <a href="https://wa.me/+8801773061332">
+            <button
+              type="button"
+              className="w-12 h-12 flex justify-center items-center rounded-full bg-[#25d366]"
+            >
+              <FaWhatsapp className="text-4xl text-white" />
+            </button>
+          </a>
         </div>
       </div>
     </div>

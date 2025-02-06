@@ -18,7 +18,7 @@ const Navbar = () => {
         showMobileMenu={showMobileMenu}
       />
 
-      <div className="shadow-md bg-transparent dark:bg-darkGray fixed top-0 w-full z-10 backdrop-blur-md">
+      <div className="shadow-md bg-transparent dark:bg-darkGray fixed top-0 w-full z-50 backdrop-blur-md">
         <div className="container mx-auto px-3">
           <div className="flex py-5 justify-between items-center">
             {/* navbar start */}

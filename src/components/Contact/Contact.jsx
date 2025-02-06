@@ -169,19 +169,17 @@ const Contact = () => {
               <h4 className="text-lg font-medium text-primaryColor">
                 Follow Me
               </h4>
-              <div className="flex space-x-6">
-                <div className="w-12 h-12 bg-white rounded-full flex justify-center items-center">
-                  <a
-                    href="#"
-                    className="text-blue-600 text-3xl hover:text-blue-800"
-                    aria-label="LinkedIn"
-                  >
-                    <FaLinkedin />
-                  </a>
-                </div>
+              <div className="flex space-x-4 items-center">
                 <a
-                  href="#"
-                  className="text-gray-800 text-3xl hover:text-gray-600"
+                  href="https://www.linkedin.com/in/hasinur3813"
+                  className="text-blue-600 text-3xl "
+                  aria-label="LinkedIn"
+                >
+                  <FaLinkedin />
+                </a>
+                <a
+                  href="https://github.com/Hasinur3813"
+                  className="text-gray-800 dark:text-gray-400 text-3xl "
                   aria-label="GitHub"
                 >
                   <FaGithub />

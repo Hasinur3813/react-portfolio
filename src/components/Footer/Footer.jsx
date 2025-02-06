@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Branding */}
           <div className="text-center md:text-left">
             <h1 className="text-2xl font-bold text-white">Hasinur Rahman</h1>
-            <p className="text-sm text-muted">
+            <p className="text-sm text-muted dark:text-lightGray">
               Front-End Developer | Passionate about building user-friendly web
               experiences.
             </p>

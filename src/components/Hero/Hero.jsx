@@ -1,10 +1,4 @@
-import {
-  FaGithub,
-  FaLinkedin,
-  FaTwitter,
-  FaDownload,
-  FaFacebook,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaDownload, FaFacebook } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
 import { FaReact, FaNodeJs, FaJs } from "react-icons/fa";
 import { Button } from "antd";
@@ -69,7 +63,7 @@ const Hero = () => {
               <FaGithub />
             </a>
             <a
-              href="https://www.linkedin.com/in/hasinur3813/"
+              href="https://www.linkedin.com/in/hasinur3813"
               className=" hover:text-primaryColor"
             >
               <FaLinkedin />

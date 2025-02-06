@@ -3,7 +3,7 @@ import PageHeader from "../../components/PageHeader/PageHeader";
 
 const AboutMe = () => {
   return (
-    <section className="py-16 md:mt-5">
+    <section className="py-16 md:mt-5 bg-lightGray dark:bg-darkGray">
       {/* heading */}
       <PageHeader
         heading={"About Me"}
@@ -13,10 +13,10 @@ const AboutMe = () => {
       {/* content */}
       <div className="container mx-auto px-4 overflow-hidden">
         {/* top content */}
-        <div className="flex flex-col md:flex-row justify-between gap-10 py-10 mt-20">
+        <div className="flex flex-col md:flex-row justify-between gap-10 py-10 mt-14 lg:mt-20">
           <div className="md:w-1/2 w-full flex justify-center h-fit relative">
             {/* blob */}
-            <div className="absolute w-[500px] h-[500px] -top-32 -z-10">
+            <div className="absolute w-[500px] h-[500px] -top-32 z-10">
               <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                 <path
                   fill="#FF0066"
@@ -28,29 +28,29 @@ const AboutMe = () => {
             <img
               src={myPhoto}
               alt="Hasinu Rahman"
-              className="w-64 rounded-full ring-2 ring-primaryColor ring-offset-4"
+              className="w-64 rounded-full ring-2 ring-primaryColor ring-offset-4 relative z-20"
             />
           </div>
 
           {/* content */}
-          <div className="md:w-1/2 mt-20 md:mt-0 w-full ms-auto">
+          <div className="md:w-1/2 mt-20 md:mt-0 w-full ms-auto ">
             <h2 className="text-3xl font-bold mb-4 text-primaryColor">
               Who I Am?
             </h2>
-            <p className="text-muted">
+            <p className="text-muted dark:text-lightGray">
               I am <strong>Hasinur Rahman</strong> who has over 2 years of
               hands-on experience in creating visually appealing and interactive
               web applications.
             </p>
 
-            <p className="text-muted mt-4">
+            <p className="text-muted mt-4 dark:text-lightGray">
               I specialize in front-end development using modern technologies
               like <strong>React</strong>,<strong> Tailwind CSS</strong>,{" "}
               <strong>Ant Design</strong>,<strong> DaisyUI</strong>, and{" "}
               <strong>Framer Motion</strong>. My passion for coding and design
               drives me to continuously learn and improve my skills.
             </p>
-            <p className="text-muted mt-4">
+            <p className="text-muted mt-4 dark:text-lightGray">
               In my free time, I enjoy contributing to open-source projects,
               exploring new web development trends, and sharing my knowledge
               with the developer community.
@@ -60,7 +60,7 @@ const AboutMe = () => {
 
         {/* bottom content */}
         <div className="mt-32">
-          <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+          <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical ">
             <li>
               <div className="timeline-middle">
                 <svg
@@ -80,7 +80,7 @@ const AboutMe = () => {
                 <h2 className="text-2xl font-bold mb-4 text-primaryColor">
                   My Journey
                 </h2>
-                <p className="text-muted">
+                <p className="text-muted dark:text-lightGray">
                   My journey into web development started with curiosity and a
                   passion for technology. Over the years, I honed my skills in
                   front-end development with basic backend knowledge, mastering
@@ -88,7 +88,7 @@ const AboutMe = () => {
                   <strong>Tailwind</strong>, <strong>Node</strong>,{" "}
                   <strong>Express</strong>, <strong>Mongodb</strong> etc.
                 </p>
-                <p className="text-muted mt-4">
+                <p className="text-muted mt-4 dark:text-lightGray">
                   My attraction to technology began when I was in school. I
                   learned the basics of HTML and CSS during my college years,
                   but I professionally started coding after my graduation.
@@ -117,8 +117,10 @@ const AboutMe = () => {
                 <h2 className="text-2xl font-bold mb-4 text-primaryColor">
                   My Tech Stack
                 </h2>
-                <p className="text-muted">Technologies I work with:</p>
-                <ul className="list-disc list-inside mt-3 text-muted">
+                <p className="text-muted dark:text-lightGray">
+                  Technologies I work with:
+                </p>
+                <ul className="list-disc list-inside mt-3 text-muted dark:text-lightGray">
                   <li>React.js & Next.js</li>
                   <li>Tailwind CSS & Ant Design</li>
                   <li>
@@ -150,12 +152,12 @@ const AboutMe = () => {
                 <h2 className="text-2xl font-bold mb-4 text-primaryColor">
                   How I Work
                 </h2>
-                <p className="text-muted">
+                <p className="text-muted dark:text-lightGray">
                   My workflow involves deep research, planning, coding, and
                   optimization. I believe in writing clean, scalable, and
                   maintainable code to build high-quality web applications.
                 </p>
-                <p className="text-muted mt-4">
+                <p className="text-muted mt-4 dark:text-lightGray">
                   I start by understanding the project requirements and
                   conducting thorough research. Then, I create a detailed plan
                   and break down the tasks into manageable chunks. During the
@@ -164,7 +166,7 @@ const AboutMe = () => {
                   perform rigorous testing and optimization to ensure the
                   application runs smoothly and efficiently.
                 </p>
-                <p className="text-muted mt-4">
+                <p className="text-muted mt-4 dark:text-lightGray">
                   I also believe in continuous learning and improvement. I
                   regularly review my code and seek feedback from peers to
                   identify areas for improvement. This iterative process helps
@@ -194,7 +196,7 @@ const AboutMe = () => {
                 <h2 className="text-2xl font-bold mb-4 text-primaryColor">
                   Let&apos;s Connect!
                 </h2>
-                <p className="text-muted mb-4">
+                <p className="text-muted mb-4 dark:text-lightGray">
                   Looking to collaborate or hire me? Let&apos;s build something
                   amazing together!
                 </p>
