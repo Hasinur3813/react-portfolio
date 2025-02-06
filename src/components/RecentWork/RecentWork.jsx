@@ -62,7 +62,7 @@ const RecentWork = () => {
           <h2 className="font-bold text-3xl text-primaryColor">
             My Recent Work
           </h2>
-          <p className="text-gray-600 mt-2 max-w-lg mx-auto">
+          <p className="text-darkGray dark:text-lightGray mt-2 max-w-lg mx-auto">
             Here are some of the projects I&apos;ve been working on recently,
             showcasing my skills in web development and design.
           </p>

@@ -24,7 +24,7 @@ const HowICode = () => {
           <h2 className="text-4xl font-bold text-primaryColor">
             My Coding Style
           </h2>
-          <p className="text-lg text-muted leading-relaxed">
+          <p className="text-lg dark:text-lightGray text-muted leading-relaxed">
             My approach to coding is simple yet effective: focus on clarity,
             scalability, and performance. I prioritize writing clean,
             maintainable code while leveraging modern technologies like
@@ -33,7 +33,7 @@ const HowICode = () => {
             and{" "}
             <span className="text-primaryColor font-semibold"> MongoDB</span>.
           </p>
-          <p className="text-lg text-muted leading-relaxed">
+          <p className="text-lg dark:text-lightGray text-muted leading-relaxed">
             From crafting reusable components to implementing efficient
             algorithms, I aim to deliver robust and scalable solutions.
             Here&apos;s a glimpse of my coding style:

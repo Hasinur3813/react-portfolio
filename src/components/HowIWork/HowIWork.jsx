@@ -31,7 +31,7 @@ const HowIWork = () => {
         {/* Section Title */}
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-primaryColor">How I Work</h2>
-          <p className="text-muted">
+          <p className="text-muted dark:text-lightGray">
             My process ensures efficient delivery of high-quality projects.
           </p>
         </div>
@@ -41,16 +41,18 @@ const HowIWork = () => {
           {steps.map((step) => (
             <div
               key={step.id}
-              className="bg-white border border-primaryColor shadow-md rounded-lg p-6 text-center hover:shadow-lg hover:shadow-primaryColor transition-shadow duration-200"
+              className="bg-white border border-primaryColor shadow-md rounded-lg p-6 text-center hover:shadow-lg hover:shadow-primaryColor transition-shadow duration-200 dark:bg-slate-800"
             >
               {/* Icon */}
               <div className="mb-4 flex justify-center">{step.icon}</div>
               {/* Title */}
-              <h3 className="text-xl font-semibold text-gray-800">
+              <h3 className="text-xl font-semibold text-darkGray dark:text-lightGray">
                 {step.title}
               </h3>
               {/* Description */}
-              <p className="text-muted mt-2">{step.description}</p>
+              <p className="text-muted dark:text-gray-400 mt-2">
+                {step.description}
+              </p>
             </div>
           ))}
         </div>

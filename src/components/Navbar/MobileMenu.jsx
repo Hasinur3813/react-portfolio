@@ -46,11 +46,11 @@ const MobileMenu = ({ handleCloseMenu, showMobileMenu }) => {
           <h3 className="text-base font-semibold">Menu</h3>
 
           {/* nav links */}
-          <ul className="mt-4 space-y-2 text-center">
+          <ul className="mt-4 space-y-2 text-center font-semibold">
             <li className="group">
               <Link
                 to={"/"}
-                className="group-hover:bg-accent-hover text-lg block rounded-md"
+                className="group-hover:text-primaryColor text-lg block rounded-md "
               >
                 Home
               </Link>
@@ -58,7 +58,7 @@ const MobileMenu = ({ handleCloseMenu, showMobileMenu }) => {
             <li className="group">
               <Link
                 to={"/about-me"}
-                className="group-hover:bg-accent-hover text-lg block rounded-md"
+                className="group-hover:text-primaryColor text-lg block rounded-md "
               >
                 About me
               </Link>
@@ -66,7 +66,7 @@ const MobileMenu = ({ handleCloseMenu, showMobileMenu }) => {
             <li className="group">
               <Link
                 to={"/projects"}
-                className="group-hover:bg-accent-hover text-lg block rounded-md"
+                className="group-hover:text-primaryColor text-lg block rounded-md "
               >
                 Projects
               </Link>
@@ -74,19 +74,21 @@ const MobileMenu = ({ handleCloseMenu, showMobileMenu }) => {
             <li className="group">
               <Link
                 to={"/contact"}
-                className="group-hover:bg-accent-hover text-lg block rounded-md"
+                className="group-hover:text-primaryColor text-lg block rounded-md "
               >
                 Contact
               </Link>
             </li>
 
             <li>
-              <button
-                className="mt-5 w-full border-secondaryColor border text-lightGray bg-primaryColor hover:text-lightGray hover:bg-secondaryColor rounded-md px-4 py-2 text-lg font-semibold"
-                type="button"
-              >
-                Hire me
-              </button>
+              <a href="#contact">
+                <button
+                  className="mt-5 w-full border-secondaryColor border text-lightGray bg-primaryColor hover:text-lightGray hover:bg-secondaryColor rounded-md px-4 py-2 text-lg font-semibold"
+                  type="button"
+                >
+                  Hire me
+                </button>
+              </a>
             </li>
           </ul>
         </div>
@@ -99,16 +101,23 @@ const MobileMenu = ({ handleCloseMenu, showMobileMenu }) => {
         <div className="mt-10">
           <h3 className="text-base font-semibold">Social</h3>
           <div className="mt-5 flex space-x-8 text-3xl ">
-            <a href="#" className="text-primaryColor">
+            <a
+              href="https://github.com/Hasinur3813"
+              className="hover:text-primaryColor shadow-primaryColor"
+            >
               <FaGithub />
             </a>
-            <a href="#" className="text-primaryColor">
+            <a
+              href="https://www.linkedin.com/in/hasinur3813/"
+              className=" hover:text-primaryColor"
+            >
               <FaLinkedin />
             </a>
-            <a href="#" className="text-primaryColor">
-              <FaTwitter />
-            </a>
-            <a href="#" className="text-primaryColor">
+
+            <a
+              href="https://www.facebook.com/ha3813"
+              className="hover:text-primaryColor"
+            >
               <FaFacebook />
             </a>
           </div>

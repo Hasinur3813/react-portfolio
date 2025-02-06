@@ -25,7 +25,10 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-16 dark:bg-darkGray relative bg-lightGray">
+    <section
+      id="contact"
+      className=" py-16 dark:bg-darkGray relative bg-lightGray"
+    >
       <div className="absolute top-0 right-0 hidden sm:block">
         <img src={grid} alt="shape" />
       </div>
@@ -33,7 +36,9 @@ const Contact = () => {
         {/* Section Title */}
         <div className="text-center mb-20">
           <h2 className="text-3xl font-bold text-primaryColor">Get in Touch</h2>
-          <p className="text-darkGray">Feel free to reach out anytime!</p>
+          <p className="text-darkGray dark:text-lightGray">
+            Feel free to reach out anytime!
+          </p>
         </div>
 
         <div className="flex flex-col md:flex-row items-center gap-12">
@@ -45,11 +50,12 @@ const Contact = () => {
               form={form}
               onFinish={onFinish}
               onFinishFailed={onFinishFailed}
-              className="bg-white lg:max-w-lg w-full border-2 border-primaryColor shadow-lg rounded-tr-badge rounded-bl-badge p-8"
+              className="bg-white lg:max-w-lg w-full border-2 border-primaryColor shadow-lg rounded-tr-badge rounded-bl-badge p-8  "
             >
               <Form.Item
                 label="Name"
                 name="name"
+                className="text-white"
                 rules={[{ required: true, message: "Please enter your name!" }]}
               >
                 <Input
@@ -136,14 +142,25 @@ const Contact = () => {
             <h3 className="text-2xl text-primaryColor font-semibold">
               Contact Info
             </h3>
-            <div className="space-y-4">
-              <div className="flex items-center space-x-4">
-                <FaPhone className="text-darkGray text-2xl" />
-                <span>+880 1773 06 1332</span>
+            <div className="space-y-6">
+              <div className="flex flex-col">
+                <span className="w-fit px-3 py-1 text-white rounded font-semibold mb-2 bg-primaryColor">
+                  Phone
+                </span>
+                <div className="flex dark:text-lightGray space-x-4 items-center">
+                  <FaPhone className="text-darkGray dark:text-lightGray text-xl" />
+                  <span>+880 1773 06 1332</span>
+                </div>
               </div>
-              <div className="flex items-center space-x-4">
-                <FaEnvelope className="text-darkGray text-2xl" />
-                <span>hasinur.rahman1332@gmail.com</span>
+
+              <div className="flex flex-col">
+                <span className="w-fit px-3 py-1 text-white rounded font-semibold mb-2 bg-primaryColor">
+                  Email
+                </span>
+                <div className="flex space-x-4 items-center dark:text-lightGray">
+                  <FaEnvelope className="text-darkGray dark:text-lightGray text-xl" />
+                  <span>hasinur.rahman1332@gmail.com</span>
+                </div>
               </div>
             </div>
 
@@ -153,13 +170,15 @@ const Contact = () => {
                 Follow Me
               </h4>
               <div className="flex space-x-6">
-                <a
-                  href="#"
-                  className="text-blue-600 text-3xl hover:text-blue-800"
-                  aria-label="LinkedIn"
-                >
-                  <FaLinkedin />
-                </a>
+                <div className="w-12 h-12 bg-white rounded-full flex justify-center items-center">
+                  <a
+                    href="#"
+                    className="text-blue-600 text-3xl hover:text-blue-800"
+                    aria-label="LinkedIn"
+                  >
+                    <FaLinkedin />
+                  </a>
+                </div>
                 <a
                   href="#"
                   className="text-gray-800 text-3xl hover:text-gray-600"

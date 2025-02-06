@@ -23,25 +23,30 @@ const Navbar = () => {
           <div className="flex py-5 justify-between items-center">
             {/* navbar start */}
             <div className="">
-              <Link to={"/"} className="text-3xl font-semibold ">
+              <Link
+                to={"/"}
+                className="text-3xl dark:text-lightGray font-semibold "
+              >
                 Hasinur <span className="text-primaryColor">.</span>
               </Link>
             </div>
             {/* navbar end */}
             <div className="flex items-center">
-              <ul className=" space-x-4 text-base items-center hidden md:flex">
+              <ul className=" space-x-4 text-base items-center hidden md:flex dark:text-lightGray">
                 <MenuLink path="/" text="Home" />
                 <MenuLink path="/projects" text="Project" />
                 <MenuLink path="/about-me" text="About Me" />
                 <MenuLink path="/contact" text="Contact" />
                 <li>
-                  <button
-                    className="ms-4 border-secondaryColor border 
+                  <a href="#contact">
+                    <button
+                      className="ms-4 border-secondaryColor border 
                     bg-primaryColor text-lightGray hover:bg-secondaryColor rounded-md px-4 py-2 text-lg font-semibold"
-                    type="button"
-                  >
-                    Hire me
-                  </button>
+                      type="button"
+                    >
+                      Hire me
+                    </button>
+                  </a>
                 </li>
               </ul>
 

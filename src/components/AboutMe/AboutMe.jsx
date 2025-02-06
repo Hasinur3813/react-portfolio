@@ -1,6 +1,7 @@
 import { FaArrowRight } from "react-icons/fa";
 import myPhoto from "../../assets/myPhoto.jpg";
 import Section from "../../layout/Section";
+import { Link } from "react-router-dom";
 
 const AboutMe = () => {
   return (
@@ -25,17 +26,17 @@ const AboutMe = () => {
           <h2 className="text-3xl sm:text-4xl  font-bold text-primaryColor">
             Designing Digital Experiences That Inspire
           </h2>
-          <p className="text-lg text-gray-800 leading-relaxed">
+          <p className="text-lg dark:text-lightGray text-gray-800 leading-relaxed">
             I’m a passionate{" "}
             <span className="font-semibold text-primaryColor">
               Front-End Developer
             </span>{" "}
             who specializes in creating visually stunning and interactive web
-            experiences. Whether it's crafting responsive designs, implementing
-            smooth animations, or ensuring seamless user interactions, I bring
-            ideas to life with precision and creativity.
+            experiences. Whether it&apos;s crafting responsive designs,
+            implementing smooth animations, or ensuring seamless user
+            interactions, I bring ideas to life with precision and creativity.
           </p>
-          <ul className="text-sm text-muted space-y-1">
+          <ul className="text-sm text-muted dark:text-gray-400 space-y-1">
             <li>✨ Expert in React, Tailwind CSS, and JavaScript ES6+</li>
             <li>✨ Strong focus on UI/UX principles and design systems</li>
             <li>✨ Skilled at creating accessible and responsive layouts</li>
@@ -45,10 +46,12 @@ const AboutMe = () => {
             </li>
           </ul>
           {/* CTA Button */}
-          <button className="group flex items-center gap-2 px-6 py-3 bg-primaryColor text-lightGray text-lg font-semibold rounded-md shadow-lg hover:shadow-xl hover:bg-secondaryColor transition-all duration-200">
-            Know More{" "}
-            <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-200" />
-          </button>
+          <Link to={"/about-me"} className="inline-block">
+            <button className="group flex items-center gap-2 px-6 py-3 bg-primaryColor text-lightGray text-lg font-semibold rounded-md shadow-lg hover:shadow-xl hover:bg-secondaryColor transition-all duration-200">
+              Know More
+              <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-200" />
+            </button>
+          </Link>
         </div>
       </div>
     </Section>
