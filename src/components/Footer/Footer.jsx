@@ -51,7 +51,7 @@ const Footer = () => {
                 <li>
                   Email:{" "}
                   <a
-                    href="mailto:your.email@example.com"
+                    href="mailto:hasinur.rahman1332@gmail.com"
                     className="hover:text-white"
                   >
                     hasinur.rahman1332@gmail.com
@@ -59,7 +59,7 @@ const Footer = () => {
                 </li>
                 <li>
                   Phone:{" "}
-                  <a href="tel:+123456789" className="hover:text-white">
+                  <a href="tel:+8801773061332" className="hover:text-white">
                     +880 1773 06 1332
                   </a>
                 </li>
@@ -76,7 +76,7 @@ const Footer = () => {
           {/* Social Links */}
           <div className="flex gap-4">
             <a
-              href="https://github.com/your-profile"
+              href="https://github.com/Hasinur3813"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white text-xl"
@@ -84,7 +84,7 @@ const Footer = () => {
               <FaGithub />
             </a>
             <a
-              href="https://linkedin.com/in/your-profile"
+              href="https://www.linkedin.com/in/hasinur3813"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white text-xl"

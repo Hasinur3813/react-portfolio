@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import { Card, Button, Tag, Modal } from "antd";
-import web from "../../assets/pet.png";
-import thumb from "../../assets/edutrial.png";
+
 import Section from "../../layout/Section";
 import projects from "../../utils/projects";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const ProjectDetails = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

@@ -8,11 +8,13 @@ import ThemesProvider from "./context/ThemesProvider";
 import Projects from "./Pages/Projects/Projects";
 import AboutMe from "./Pages/AboutMe/AboutMe";
 import ProjectDetails from "./Pages/ProjectDetails/ProjectDetails";
+import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import myPhoto from "../../assets/myPhoto.jpg";
 import PageHeader from "../../components/PageHeader/PageHeader";
 
@@ -200,9 +201,11 @@ const AboutMe = () => {
                   Looking to collaborate or hire me? Let&apos;s build something
                   amazing together!
                 </p>
-                <button className="px-6 py-3 bg-primaryColor text-white rounded-md shadow-md hover:bg-secondaryColor transition">
-                  Contact Me
-                </button>
+                <Link to={"/#contact"}>
+                  <button className="px-6 py-3 bg-primaryColor text-white rounded-md shadow-md hover:bg-secondaryColor transition">
+                    Contact Me
+                  </button>
+                </Link>
               </div>
               <hr />
             </li>

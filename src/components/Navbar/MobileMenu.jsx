@@ -1,10 +1,4 @@
-import {
-  FaFacebook,
-  FaGithub,
-  FaLinkedin,
-  FaTwitter,
-  FaXmark,
-} from "react-icons/fa6";
+import { FaFacebook, FaGithub, FaLinkedin, FaXmark } from "react-icons/fa6";
 import Themes from "../Shared/Themes";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
@@ -25,7 +19,7 @@ const MobileMenu = ({ handleCloseMenu, showMobileMenu }) => {
       onClick={handleCloseMobileMenu}
       className={`${
         showMobileMenu && "!translate-x-0"
-      }   translate-x-full fixed md:hidden top-0 right-0 w-full min-h-screen z-40 bg-black/50 flex justify-end`}
+      }   translate-x-full fixed md:hidden top-0 right-0 w-full min-h-screen z-[1000] bg-black/50 flex justify-end`}
     >
       {/* mobile menu */}
       <div
@@ -73,7 +67,7 @@ const MobileMenu = ({ handleCloseMenu, showMobileMenu }) => {
             </li>
             <li className="group">
               <Link
-                to={"/contact"}
+                to={"/#contact"}
                 className="group-hover:text-primaryColor text-lg block rounded-md "
               >
                 Contact

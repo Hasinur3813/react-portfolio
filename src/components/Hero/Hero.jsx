@@ -37,7 +37,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-lg text-muted leading-relaxed dark:text-lightGray">
-            A passionate MERN stack developer specializing in creating
+            A passionate Frontend developer specializing in creating
             user-friendly web applications. I love crafting elegant solutions to
             complex problems.
           </p>
