@@ -1,37 +1,57 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Card, Button, Tag, Modal } from "antd";
 import web from "../../assets/pet.png";
-import thumb from "../../assets/edu.png";
+import thumb from "../../assets/edutrial.png";
 import Section from "../../layout/Section";
+import projects from "../../utils/projects";
+import { Link, useParams } from "react-router-dom";
 
 const ProjectDetails = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { id } = useParams();
+  const [project, setProject] = useState({});
+  const [loading, setLoading] = useState(true);
 
-  const project = {
-    id: 1,
-    title: "E-Commerce Platform",
-    image: "https://via.placeholder.com/400x800",
-    description:
-      "A fully responsive e-commerce platform with payment integration. This project is designed to provide a seamless shopping experience for users. It includes features such as user authentication, product search, and filtering, shopping cart, and order management. The platform is built using modern web technologies to ensure high performance and scalability. The frontend is developed with React, providing a dynamic and responsive user interface. The backend is powered by Node.js and Express, offering a robust and scalable server-side solution. MongoDB is used as the database to store user and product information securely. The project also integrates with various payment gateways to facilitate smooth and secure transactions. TailwindCSS is used for styling, ensuring a clean and modern look. The project is fully responsive, making it accessible on both desktop and mobile devices. Additionally, the platform includes an admin panel for managing products, orders, and users. This project demonstrates the use of best practices in web development, including code modularity, reusable components, and efficient state management. It also showcases the integration of third-party APIs and services to enhance functionality. Overall, this e-commerce platform is a comprehensive solution for online retail businesses, providing all the necessary features to run a successful online store.A fully responsive e-commerce platform with payment integration. This project is designed to provide a seamless shopping experience for users. It includes features such as user authentication, product search, and filtering, shopping cart, and order management. The platform is built using modern web technologies to ensure high performance and scalability. The frontend is developed with React, providing a dynamic and responsive user interface. The backend is powered by Node.js and Express, offering a robust and scalable server-side solution. MongoDB is used as the database to store user and product information securely. The project also integrates with various payment gateways to facilitate smooth and secure transactions. TailwindCSS is used for styling, ensuring a clean and modern look. The project is fully responsive, making it accessible on both desktop and mobile devices. Additionally, the platform includes an admin panel for managing products, orders, and users. This project demonstrates the use of best practices in web development, including code modularity, reusable components, and efficient state management. It also showcases the integration of third-party APIs and services to enhance functionality. Overall, this e-commerce platform is a comprehensive solution for online retail businesses, providing all the necessary features to run a successful online store.A fully responsive e-commerce platform with payment integration. This project is designed to provide a seamless shopping experience for users. It includes features such as user authentication, product search, and filtering, shopping cart, and order management. The platform is built using modern web technologies to ensure high performance and scalability. The frontend is developed with React, providing a dynamic and responsive user interface. The backend is powered by Node.js and Express, offering a robust and scalable server-side solution. MongoDB is used as the database to store user and product information securely. The project also integrates with various payment gateways to facilitate smooth and secure transactions. TailwindCSS is used for styling, ensuring a clean and modern look. The project is fully responsive, making it accessible on both desktop and mobile devices. Additionally, the platform includes an admin panel for managing products, orders, and users. This project demonstrates the use of best practices in web development, including code modularity, reusable components, and efficient state management. It also showcases the integration of third-party APIs and services to enhance functionality. Overall, this e-commerce platform is a comprehensive solution for online retail businesses, providing all the necessary features to run a successful online store.A fully responsive e-commerce platform with payment integration. This project is designed to provide a seamless shopping experience for users. It includes features such as user authentication, product search, and filtering, shopping cart, and order management. The platform is built using modern web technologies to ensure high performance and scalability. The frontend is developed with React, providing a dynamic and responsive user interface. The backend is powered by Node.js and Express, offering a robust and scalable server-side solution. MongoDB is used as the database to store user and product information securely. The project also integrates with various payment gateways to facilitate smooth and secure transactions. TailwindCSS is used for styling, ensuring a clean and modern look. The project is fully responsive, making it accessible on both desktop and mobile devices. Additionally, the platform includes an admin panel for managing products, orders, and users. This project demonstrates the use of best practices in web development, including code modularity, reusable components, and efficient state management. It also showcases the integration of third-party APIs and services to enhance functionality. Overall, this e-commerce platform is a comprehensive solution for online retail businesses, providing all the necessary features to run a successful online store.",
-    technologies: [
-      "React",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "tailwindcss",
-      "css3",
-      "antd",
-    ],
-    github: {
-      client: "https://github.io/hasinur3813",
-      server: "https://github.io/hasinur3813",
-    },
-    detailsLink: "#",
-    liveLink: "https://github.com",
-  };
+  useEffect(() => {
+    const project = projects.find((proj) => proj.id === parseInt(id));
+    if (project) {
+      setProject(project);
+      setLoading(false);
+    } else {
+      setProject({});
+      setLoading(false);
+    }
+  }, [id, project]);
+
+  if (loading) {
+    return <h2>Loading...</h2>;
+  }
+
+  //   const project = {
+  //     id: 1,
+  //     title: "E-Commerce Platform",
+  //     image: "https://via.placeholder.com/400x800",
+  //     description:
+  //       "A fully responsive e-commerce platform with payment integration. This project is designed to provide a seamless shopping experience for users. It includes features such as user authentication, product search, and filtering, shopping cart, and order management. The platform is built using modern web technologies to ensure high performance and scalability. The frontend is developed with React, providing a dynamic and responsive user interface. The backend is powered by Node.js and Express, offering a robust and scalable server-side solution. MongoDB is used as the database to store user and product information securely. The project also integrates with various payment gateways to facilitate smooth and secure transactions. TailwindCSS is used for styling, ensuring a clean and modern look. The project is fully responsive, making it accessible on both desktop and mobile devices. Additionally, the platform includes an admin panel for managing products, orders, and users. This project demonstrates the use of best practices in web development, including code modularity, reusable components, and efficient state management. It also showcases the integration of third-party APIs and services to enhance functionality. Overall, this e-commerce platform is a comprehensive solution for online retail businesses, providing all the necessary features to run a successful online store.A fully responsive e-commerce platform with payment integration. This project is designed to provide a seamless shopping experience for users. It includes features such as user authentication, product search, and filtering, shopping cart, and order management. The platform is built using modern web technologies to ensure high performance and scalability. The frontend is developed with React, providing a dynamic and responsive user interface. The backend is powered by Node.js and Express, offering a robust and scalable server-side solution. MongoDB is used as the database to store user and product information securely. The project also integrates with various payment gateways to facilitate smooth and secure transactions. TailwindCSS is used for styling, ensuring a clean and modern look. The project is fully responsive, making it accessible on both desktop and mobile devices. Additionally, the platform includes an admin panel for managing products, orders, and users. This project demonstrates the use of best practices in web development, including code modularity, reusable components, and efficient state management. It also showcases the integration of third-party APIs and services to enhance functionality. Overall, this e-commerce platform is a comprehensive solution for online retail businesses, providing all the necessary features to run a successful online store.A fully responsive e-commerce platform with payment integration. This project is designed to provide a seamless shopping experience for users. It includes features such as user authentication, product search, and filtering, shopping cart, and order management. The platform is built using modern web technologies to ensure high performance and scalability. The frontend is developed with React, providing a dynamic and responsive user interface. The backend is powered by Node.js and Express, offering a robust and scalable server-side solution. MongoDB is used as the database to store user and product information securely. The project also integrates with various payment gateways to facilitate smooth and secure transactions. TailwindCSS is used for styling, ensuring a clean and modern look. The project is fully responsive, making it accessible on both desktop and mobile devices. Additionally, the platform includes an admin panel for managing products, orders, and users. This project demonstrates the use of best practices in web development, including code modularity, reusable components, and efficient state management. It also showcases the integration of third-party APIs and services to enhance functionality. Overall, this e-commerce platform is a comprehensive solution for online retail businesses, providing all the necessary features to run a successful online store.A fully responsive e-commerce platform with payment integration. This project is designed to provide a seamless shopping experience for users. It includes features such as user authentication, product search, and filtering, shopping cart, and order management. The platform is built using modern web technologies to ensure high performance and scalability. The frontend is developed with React, providing a dynamic and responsive user interface. The backend is powered by Node.js and Express, offering a robust and scalable server-side solution. MongoDB is used as the database to store user and product information securely. The project also integrates with various payment gateways to facilitate smooth and secure transactions. TailwindCSS is used for styling, ensuring a clean and modern look. The project is fully responsive, making it accessible on both desktop and mobile devices. Additionally, the platform includes an admin panel for managing products, orders, and users. This project demonstrates the use of best practices in web development, including code modularity, reusable components, and efficient state management. It also showcases the integration of third-party APIs and services to enhance functionality. Overall, this e-commerce platform is a comprehensive solution for online retail businesses, providing all the necessary features to run a successful online store.",
+  //     technologies: [
+  //       "React",
+  //       "Node.js",
+  //       "Express",
+  //       "MongoDB",
+  //       "tailwindcss",
+  //       "css3",
+  //       "antd",
+  //     ],
+  //     github: {
+  //       client: "https://github.io/hasinur3813",
+  //       server: "https://github.io/hasinur3813",
+  //     },
+  //     detailsLink: "#",
+  //     liveLink: "https://github.com",
+  //   };
 
   return (
-    <Section className="py-16 mt-14 bg-offWhite dark:bg-darkGray">
+    <Section className="py-16 mt-14 bg-offWhite dark:bg-darkGray ">
       <div className="max-w-4xl mx-auto px-4">
         {/* Project Image - Click to View Fullscreen */}
         <div
@@ -39,8 +59,8 @@ const ProjectDetails = () => {
           onClick={() => setIsModalOpen(true)}
         >
           <img
-            src={thumb}
-            alt={project.title}
+            src={project.image}
+            alt={project?.title}
             className="w-full h-auto rounded-lg shadow-lg hover:opacity-80 transition duration-300"
           />
           <p className="absolute bottom-2 right-2 bg-primaryColor text-white px-3 py-1 text-sm rounded-lg">
@@ -50,17 +70,33 @@ const ProjectDetails = () => {
 
         {/* Project Details */}
         <Card className="">
-          <h1 className="text-2xl font-bold mb-4">{project.title}</h1>
+          <h1 className="text-2xl font-bold mb-4">{project?.title}</h1>
           <p className="text-muted text-base leading-relaxed mb-4">
-            {project.description}
+            {project?.description}
           </p>
+
+          {/* key features */}
+          <div>
+            <h3 className="font-semibold text-primaryColor text-lg">
+              Key Features:
+            </h3>
+            <ul className="list-disc list-inside">
+              {project.features.map((feature, i) => (
+                <li key={i} className="capitalize">
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </div>
 
           {/* Technologies Used */}
           <div className="my-4">
-            <h3 className="font-semibold">Technologies Used:</h3>
+            <h3 className="font-semibold text-lg text-primaryColor">
+              Technologies Used:
+            </h3>
             <div className="flex flex-wrap gap-2 mt-2">
-              {project.technologies.map((tech) => (
-                <Tag key={tech} color="blue">
+              {project?.technologies.map((tech) => (
+                <Tag key={tech} color="blue" className="text-base">
                   {tech}
                 </Tag>
               ))}
@@ -72,15 +108,20 @@ const ProjectDetails = () => {
             <Button
               className="bg-primaryColor hover:!bg-secondaryColor"
               type="primary"
-              href={project.liveLink}
+              href={project?.liveLink}
               target="_blank"
             >
               Live Preview
             </Button>
-            <Button href={project.github.client} target="_blank">
+
+            <Button href={project?.github.client} target="_blank">
               GitHub Client
             </Button>
-            <Button href={project.github.server} target="_blank">
+            <Button
+              href={project?.github.server}
+              target="_blank"
+              disabled={!project?.github?.server}
+            >
               GitHub Server
             </Button>
           </div>
@@ -94,7 +135,7 @@ const ProjectDetails = () => {
           centered
         >
           <img
-            src={web}
+            src={project.image}
             alt={project.title}
             className="w-full h-auto rounded-lg"
           />

@@ -1,13 +1,13 @@
 import { FaExternalLinkAlt } from "react-icons/fa";
 import Button from "../Shared/Button";
-import web from "../../assets/pet.png";
+
 import ProjectModal from "../ProjectModal/ProjectModal";
 import { Link } from "react-router-dom";
 
 const ProjectCard = ({ project }) => {
-  const handleOpenModal = () => {
-    document.getElementById("my_modal_2").showModal();
-  };
+  // const handleOpenModal = () => {
+  //   document.getElementById("my_modal_2").showModal();
+  // };
   return (
     <>
       <div
@@ -15,11 +15,11 @@ const ProjectCard = ({ project }) => {
         className="bg-white rounded-2xl shadow-md group hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col"
       >
         {/* Animated Image */}
-        <div className="relative h-56 overflow-hidden">
+        <div className="relative overflow-hidden group">
           <img
-            src={web}
+            src={project.image}
             alt={project.title}
-            className="h-auto w-full object-cover transform group-hover:translate-y-[-90%] transition-transform duration-[10s] ease"
+            className="h-auto w-full object-cover transform group-hover:scale-105 transition-transform duration-200 ease"
           />
         </div>
 
@@ -31,11 +31,39 @@ const ProjectCard = ({ project }) => {
           </h3>
 
           {/* Description */}
-          <p className="text-gray-600 text-sm mb-4">{project.description}</p>
+          <p className="text-gray-600 text-sm mb-4">
+            {project.description.slice(0, 100)}...
+          </p>
+
+          {/* chalenges faced while developing */}
+          <div className="">
+            <p className="font-semibold text-primaryColor">Challenges faced</p>
+            <ul className="list-disc list-inside">
+              {project.challenges.map((c, i) => (
+                <li key={i} className="text-sm capitalize">
+                  {c}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* potential improvements */}
+          <div className="my-3">
+            <p className="font-semibold text-primaryColor">
+              Potential Improvements
+            </p>
+            <ul className="list-disc list-inside">
+              {project.improvements.map((improvements, i) => (
+                <li key={i} className="text-sm capitalize">
+                  {improvements}
+                </li>
+              ))}
+            </ul>
+          </div>
 
           {/* Technologies */}
           <div className="flex flex-wrap gap-2 mb-4">
-            {project.technologies.map((technology) => (
+            {project["main-technologies"].map((technology) => (
               <span
                 key={technology}
                 className="inline-block bg-gradient-to-r from-primaryColor to-secondaryColor rounded-full text-xs px-3 py-1 shadow-sm text-white font-medium"
@@ -48,7 +76,7 @@ const ProjectCard = ({ project }) => {
           {/* Buttons */}
           <div className="flex justify-center md:justify-between gap-x-2 md:gap-x-0 items-end flex-grow  mt-4">
             {/* Details Button */}
-            <Link to={`/project/${project.title}`}>
+            <Link to={`/project/${project.id}`}>
               <Button
                 className={
                   "!bg-lightGray border border-primaryColor !text-primaryColor hover:!text-lightGray"
@@ -59,14 +87,15 @@ const ProjectCard = ({ project }) => {
             </Link>
 
             {/* Source Button */}
-            <Button
-              onClick={handleOpenModal}
-              className={
-                "!bg-lightGray border border-primaryColor !text-primaryColor hover:!text-lightGray"
-              }
-            >
-              Source
-            </Button>
+            <a href={project?.github?.client} target="_blank">
+              <Button
+                className={
+                  "!bg-lightGray border border-primaryColor !text-primaryColor hover:!text-lightGray"
+                }
+              >
+                Source
+              </Button>
+            </a>
             {/* Live Button */}
             <a href={project.liveLink} target="_blank">
               <Button className={"flex gap-2 items-center"}>

@@ -1,57 +1,8 @@
 import Button from "../Shared/Button";
 
 import ProjectCard from "../ProjectCard/ProjectCard";
-
-const projects = [
-  {
-    id: 1,
-    title: "E-Commerce Platform",
-    image: "https://via.placeholder.com/400x800",
-    description:
-      "A fully responsive e-commerce platform with payment integration.",
-    technologies: [
-      "React",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "tailwindcss",
-      "css3",
-      "antd",
-    ],
-    github: {
-      client: "https://github.io/hasinur3813",
-      server: "https://github.io/hasinur3813",
-    },
-    detailsLink: "#",
-    liveLink: "#",
-  },
-  {
-    id: 2,
-    title: "Portfolio Website",
-    image: "https://via.placeholder.com/400x800",
-    description: "A personal portfolio to showcase projects and skills.",
-    technologies: ["Next.js", "Tailwind CSS"],
-    github: {
-      client: "https://github.io/hasinur38",
-      server: "https://github.io/hasinur3813",
-    },
-    detailsLink: "#",
-    liveLink: "#",
-  },
-  {
-    id: 3,
-    title: "Social Media App",
-    image: "https://via.placeholder.com/400x800",
-    description: "A real-time social media app for connecting with friends.",
-    technologies: ["React", "Firebase", "Tailwind CSS"],
-    github: {
-      client: "https://github.io/hasinur381",
-      server: "https://github.io/hasinur3813",
-    },
-    detailsLink: "#",
-    liveLink: "#",
-  },
-];
+import projects from "../../utils/projects";
+import { Link } from "react-router-dom";
 
 const RecentWork = () => {
   return (
@@ -76,7 +27,9 @@ const RecentWork = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <Button>View All Project</Button>
+          <Link to={"/projects"}>
+            <Button>View All Project</Button>
+          </Link>
         </div>
       </div>
     </section>
