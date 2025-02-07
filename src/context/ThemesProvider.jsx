@@ -3,7 +3,7 @@ import { createContext, useEffect, useState } from "react";
 export const ThemeContext = createContext(null);
 
 const ThemesProvider = ({ children }) => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
   const [colorName, setColorName] = useState("");
 
   useEffect(() => {
@@ -13,7 +13,8 @@ const ThemesProvider = ({ children }) => {
       document.documentElement.classList = storedTheme;
       return;
     }
-    setTheme("light");
+    setTheme("dark");
+    document.documentElement.classList = "dark";
   }, [theme]);
 
   // change theme by toggling
