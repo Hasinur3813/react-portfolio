@@ -43,7 +43,7 @@ const Education = () => {
                       {edu.degree}
                     </h3>
                     <p className="text-gray-800 dark:text-gray-300">
-                      <span className="text-text">Major:</span> {edu.major}
+                      <span className="text-text dark:text-lightGray">Major:</span> {edu.major}
                     </p>
                     <p className="text-gray-600 dark:text-gray-300">
                       {edu.university} ({edu.year})
