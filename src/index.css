@@ -16,7 +16,9 @@
     --color-red: #ef4444;
     --color-accent-hover: #e5ffff;
     --color-bg-secondary: #e6fbfb;
+    --color-bg-dark: #1e293b;
   }
+
   * {
     @apply transition-colors duration-300 ease-in-out;
   }

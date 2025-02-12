@@ -23,7 +23,7 @@ const educationData = [
 
 const Education = () => {
   return (
-    <section className="py-16 bg-offWhite dark:bg-darkGray">
+    <section className="py-16 bg-offWhite dark:bg-bg-dark">
       <div className="container mx-auto px-5">
         <h2 className="text-3xl font-bold text-center text-primaryColor dark:text-white">
           Education
@@ -35,7 +35,7 @@ const Education = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
           {educationData.map((edu, idx) => (
             <div key={idx}>
-              <Card className="shadow-lg dark:bg-gray-800 dark:border-gray-700">
+              <Card className="shadow-lg dark:bg-muted dark:border-gray-700">
                 <div className="flex items-center gap-4">
                   <FaGraduationCap className="text-primaryColor text-3xl" />
                   <div>
@@ -43,7 +43,10 @@ const Education = () => {
                       {edu.degree}
                     </h3>
                     <p className="text-gray-800 dark:text-gray-300">
-                      <span className="text-text dark:text-lightGray">Major:</span> {edu.major}
+                      <span className="text-text dark:text-lightGray">
+                        Major:
+                      </span>{" "}
+                      {edu.major}
                     </p>
                     <p className="text-gray-600 dark:text-gray-300">
                       {edu.university} ({edu.year})

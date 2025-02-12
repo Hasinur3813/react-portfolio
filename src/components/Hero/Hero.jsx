@@ -11,7 +11,7 @@ import resume from "../../assets/hasinur_rahman.pdf";
 const Hero = () => {
   return (
     <Section className="py-16 dark:bg-darkGray mt-12 relative overflow-hidden">
-      <div className="absolute  w-[300px] h-[300px] bg-primaryColor rounded-full z-10 blur-3xl top-20 -right-40 opacity-45  "></div>
+      <div className="absolute  w-[300px] h-[200px] bg-primaryColor rounded-full z-10 blur-3xl top-48 right-20 opacity-30  "></div>
 
       <div className=" flex flex-col md:flex-row gap-y-20 items-center container mx-auto px-3  pt-10 sm:pt-20">
         {/* Left Content */}

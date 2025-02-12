@@ -41,7 +41,7 @@ const HowIWork = () => {
           {steps.map((step) => (
             <div
               key={step.id}
-              className="bg-white border border-primaryColor shadow-md rounded-lg p-6 text-center hover:shadow-lg hover:shadow-primaryColor transition-shadow duration-200 dark:bg-slate-800"
+              className="bg-white border border-primaryColor shadow-md rounded-lg p-6 text-center hover:shadow-lg hover:shadow-primaryColor transition-shadow duration-200 dark:bg-muted"
             >
               {/* Icon */}
               <div className="mb-4 flex justify-center">{step.icon}</div>

@@ -28,7 +28,7 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section className="py-16 bg-white dark:bg-darkGray ">
+    <section className="py-16 bg-white dark:bg-bg-dark ">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
@@ -55,7 +55,7 @@ const Skills = () => {
               <div
                 className={`flex flex-wrap justify-center max-w-lg ${
                   skill.category === "Backend" && "ml-auto"
-                } bg-offWhite p-6 rounded-lg items-center gap-5 border dark:bg-slate-800 border-primaryColor`}
+                } bg-offWhite p-6 rounded-lg items-center gap-5 border dark:bg-muted border-primaryColor`}
               >
                 {skill.technologies.map((tech, idx) => (
                   <p

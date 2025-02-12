@@ -50,16 +50,16 @@ const Contact = () => {
               form={form}
               onFinish={onFinish}
               onFinishFailed={onFinishFailed}
-              className="bg-white lg:max-w-lg w-full border-2 border-primaryColor shadow-lg rounded-tr-badge rounded-bl-badge p-8  "
+              className="bg-lightGray dark:bg-muted lg:max-w-lg w-full border-2 border-primaryColor shadow-lg rounded-tr-badge rounded-bl-badge p-8  "
             >
               <Form.Item
-                label="Name"
+                label={<span className="dark:text-white">Name</span>}
                 name="name"
                 className="text-white"
                 rules={[{ required: true, message: "Please enter your name!" }]}
               >
                 <Input
-                  className="hover:border-primaryColor focus:border-primaryColor focus:shadow-md"
+                  className="hover:border-primaryColor focus:border-primaryColor focus:shadow-md dark:bg-bg-dark"
                   size="large"
                   placeholder="Your Name"
                 />

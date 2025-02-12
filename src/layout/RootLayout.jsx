@@ -10,8 +10,8 @@ const RootLayout = () => {
   return (
     <div className={`${colorName} font-poppins `}>
       <ActionButtons />
-      <ScrollToTop />
       <Navbar />
+      <ScrollToTop />
       <div className="min-h-screen">
         <Outlet />
       </div>

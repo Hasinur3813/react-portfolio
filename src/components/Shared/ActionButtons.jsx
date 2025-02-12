@@ -46,8 +46,7 @@ const ActionButtons = () => {
         {/* Themes Control */}
         <div>
           <button
-            onClick={(e) => {
-              e.stopPropagation();
+            onClick={() => {
               handleShowColor();
             }}
             type="button"
@@ -64,7 +63,7 @@ const ActionButtons = () => {
               type="button"
               className="w-12 h-12 flex justify-center items-center rounded-full bg-[#25d366]"
             >
-              <FaWhatsapp className="text-4xl text-white" />
+              <FaWhatsapp className="text-3xl text-white" />
             </button>
           </a>
         </div>
