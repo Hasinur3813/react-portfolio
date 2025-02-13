@@ -9,6 +9,7 @@ import Projects from "./Pages/Projects/Projects";
 import AboutMe from "./Pages/AboutMe/AboutMe";
 import ProjectDetails from "./Pages/ProjectDetails/ProjectDetails";
 import ErrorPage from "./Pages/ErrorPage/ErrorPage";
+import Contact from "./components/Contact/Contact";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "/project/:id",
         element: <ProjectDetails />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
     ],
   },

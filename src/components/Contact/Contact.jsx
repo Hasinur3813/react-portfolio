@@ -42,7 +42,6 @@ const Contact = () => {
         </div>
 
         <div className="flex flex-col md:flex-row items-center gap-12">
-          {/* Contact Form */}
           <div className="w-full ">
             <Form
               name="contact-form"
@@ -50,7 +49,7 @@ const Contact = () => {
               form={form}
               onFinish={onFinish}
               onFinishFailed={onFinishFailed}
-              className="bg-lightGray dark:bg-muted lg:max-w-lg w-full border-2 border-primaryColor shadow-lg rounded-tr-badge rounded-bl-badge p-8  "
+              className="bg-offWhite dark:bg-muted lg:max-w-lg w-full ring-2 ring-primaryColor shadow-lg rounded-tr-badge rounded-bl-badge p-8  "
             >
               <Form.Item
                 label={<span className="dark:text-white">Name</span>}
@@ -59,14 +58,14 @@ const Contact = () => {
                 rules={[{ required: true, message: "Please enter your name!" }]}
               >
                 <Input
-                  className="hover:border-primaryColor focus:border-primaryColor focus:shadow-md dark:bg-bg-dark"
+                  className="hover:border-primaryColor focus:border-primaryColor focus:shadow-md placeholder-gray-500 dark:placeholder-gray-400"
                   size="large"
                   placeholder="Your Name"
                 />
               </Form.Item>
 
               <Form.Item
-                label="Email"
+                label={<span className="dark:text-white">Email</span>}
                 name="email"
                 rules={[
                   {
@@ -80,13 +79,13 @@ const Contact = () => {
                 ]}
               >
                 <Input
-                  className="hover:border-primaryColor focus:border-primaryColor focus:shadow-md"
+                  className="hover:border-primaryColor focus:border-primaryColor focus:shadow-md placeholder-gray-500 dark:placeholder-gray-400"
                   size="large"
                   placeholder="Your Email"
                 />
               </Form.Item>
               <Form.Item
-                label="Subject"
+                label={<span className="dark:text-white">Subject</span>}
                 name="subject"
                 rules={[
                   {
@@ -100,21 +99,21 @@ const Contact = () => {
                 ]}
               >
                 <Input
-                  className="hover:border-primaryColor focus:border-primaryColor focus:shadow-md"
+                  className="hover:border-primaryColor focus:border-primaryColor focus:shadow-md placeholder-gray-500 dark:placeholder-gray-400"
                   size="large"
                   placeholder="Your Subject"
                 />
               </Form.Item>
 
               <Form.Item
-                label="Message"
+                label={<span className="dark:text-white">Message</span>}
                 name="message"
                 rules={[
                   { required: true, message: "Please enter your message!" },
                 ]}
               >
                 <Input.TextArea
-                  className="hover:border-primaryColor focus:shadow-md"
+                  className="hover:border-primaryColor focus:shadow-md placeholder-gray-500 dark:placeholder-gray-400"
                   showCount
                   placeholder="Your Message"
                   rows={4}
