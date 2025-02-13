@@ -12,7 +12,7 @@ const ProjectCard = ({ project }) => {
     <>
       <div
         key={project.id}
-        className="bg-white rounded-2xl shadow-md group hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col"
+        className="bg-lightGray dark:bg-bg-dark rounded-2xl shadow-md group hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col"
       >
         {/* Animated Image */}
         <div className="relative overflow-hidden group">
@@ -24,42 +24,16 @@ const ProjectCard = ({ project }) => {
         </div>
 
         {/* Project Content */}
-        <div className="p-6 flex-grow flex flex-col">
+        <div className="p-6  flex-grow flex flex-col">
           {/* Title */}
-          <h3 className="font-semibold text-xl text-darkGray mb-2 group-hover:text-primaryColor transition-colors">
+          <h3 className="font-semibold text-xl text-darkGray mb-2 group-hover:text-primaryColor transition-colors dark:text-lightGray">
             {project.title}
           </h3>
 
           {/* Description */}
-          <p className="text-gray-600 text-sm mb-4">
+          <p className="text-muted dark:text-lightGray text-sm mb-4">
             {project.description.slice(0, 100)}...
           </p>
-
-          {/* chalenges faced while developing */}
-          <div className="">
-            <p className="font-semibold text-primaryColor">Challenges faced</p>
-            <ul className="list-disc list-inside">
-              {project.challenges.map((c, i) => (
-                <li key={i} className="text-sm capitalize">
-                  {c}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* potential improvements */}
-          <div className="my-3">
-            <p className="font-semibold text-primaryColor">
-              Potential Improvements
-            </p>
-            <ul className="list-disc list-inside">
-              {project.improvements.map((improvements, i) => (
-                <li key={i} className="text-sm capitalize">
-                  {improvements}
-                </li>
-              ))}
-            </ul>
-          </div>
 
           {/* Technologies */}
           <div className="flex flex-wrap gap-2 mb-4">
@@ -74,7 +48,7 @@ const ProjectCard = ({ project }) => {
           </div>
 
           {/* Buttons */}
-          <div className="flex justify-center md:justify-between gap-x-2 md:gap-x-0 items-end flex-grow  mt-4">
+          <div className="flex justify-between md:justify-between gap-x-2 md:gap-x-0 items-end flex-grow  mt-4">
             {/* Details Button */}
             <Link to={`/project/${project.id}`}>
               <Button

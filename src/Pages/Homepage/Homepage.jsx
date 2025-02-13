@@ -1,5 +1,5 @@
 import AboutMe from "../../components/AboutMe/AboutMe";
-import Contact from "../../components/Contact/Contact";
+
 import Education from "../../components/Education/Education";
 
 import Hero from "../../components/Hero/Hero";
@@ -18,7 +18,6 @@ const Homepage = () => {
       <HowICode />
       <RecentWork />
       <Skills />
-      <Contact />
     </div>
   );
 };

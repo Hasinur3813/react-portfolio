@@ -61,7 +61,7 @@ const ActionButtons = () => {
           <a href="https://wa.me/+8801773061332">
             <button
               type="button"
-              className="w-12 h-12 flex justify-center items-center rounded-full bg-[#25d366]"
+              className="w-12 h-12 shadow-lg flex justify-center items-center rounded-full bg-[#25d366]"
             >
               <FaWhatsapp className="text-3xl text-white" />
             </button>

@@ -80,7 +80,11 @@ const Hero = () => {
 
         {/* Right Image */}
         <div className=" relative flex-1 flex justify-center">
-          <Lottie animationData={developer} loop={true} className="w-1/2" />
+          <Lottie
+            animationData={developer}
+            loop={true}
+            className="md:w-1/2 w-3/4"
+          />
           {/*setting  technology icon */}
           <div className="absolute">
             <span className="relative -top-10 -left-20 lg:-left-32">
