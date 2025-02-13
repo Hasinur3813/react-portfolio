@@ -75,14 +75,14 @@ const MobileMenu = ({ handleCloseMenu, showMobileMenu }) => {
             </li>
 
             <li>
-              <a href="#contact">
+              <Link to={"/contact"}>
                 <button
                   className="mt-5 w-full border-secondaryColor border text-lightGray bg-primaryColor hover:text-lightGray hover:bg-secondaryColor rounded-md px-4 py-2 text-lg font-semibold"
                   type="button"
                 >
                   Hire me
                 </button>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
