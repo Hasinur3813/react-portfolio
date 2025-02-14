@@ -43,7 +43,11 @@ const Hero = () => {
           </p>
           {/* CTA */}
           <div className="space-y-4">
-            <a href={resume} download="hasinur_rahman.pdf">
+            <a
+              href={resume}
+              download="hasinur_rahman.pdf"
+              className="inline-block"
+            >
               <Button
                 type="primary"
                 className="group flex gap-2 items-center px-6 py-6 hover:!bg-primaryColor border-primaryColor font-semibold text-lg rounded-md shadow-md hover:shadow-xl transition-shadow duration-200 bg-offWhite text-primaryColor"
