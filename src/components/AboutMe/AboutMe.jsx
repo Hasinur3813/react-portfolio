@@ -2,12 +2,16 @@ import { FaArrowRight } from "react-icons/fa";
 import myPhoto from "../../assets/myPhoto.jpg";
 import Section from "../../layout/Section";
 import { Link } from "react-router-dom";
+import useAnimation from "../../hooks/useAnimation";
+import { motion } from "framer-motion";
 
 const AboutMe = () => {
+  const { fadeDown, slideFromLeft, zoomIn, zoomOut } = useAnimation();
   return (
     <Section className="py-16 dark:bg-darkGray">
       <div className="container mx-auto px-4 flex flex-col-reverse lg:flex-row items-center gap-24 lg:gap-10">
         {/* left content */}
+
         <div className="lg:flex-1 relative flex justify-center">
           {/* Blob Background */}
           <div className="absolute w-60 h-60 bg-primaryColor rounded-full blur-3xl animate-pulse"></div>
@@ -23,10 +27,20 @@ const AboutMe = () => {
 
         {/* right Content */}
         <div className="lg:flex-1 space-y-6 ">
-          <h2 className="text-3xl sm:text-4xl  font-bold text-primaryColor">
+          <motion.h2
+            variants={fadeDown}
+            initial="hidden"
+            whileInView="visible"
+            className="text-3xl sm:text-4xl  font-bold text-primaryColor"
+          >
             Designing Digital Experiences That Inspire
-          </h2>
-          <p className="text-lg dark:text-lightGray text-gray-800 leading-relaxed">
+          </motion.h2>
+          <motion.p
+            variants={zoomOut}
+            initial="hidden"
+            whileInView="visible"
+            className="text-lg dark:text-lightGray text-gray-800 leading-relaxed"
+          >
             I’m a passionate{" "}
             <span className="font-semibold text-primaryColor">
               Front-End Developer
@@ -35,7 +49,7 @@ const AboutMe = () => {
             experiences. Whether it&apos;s crafting responsive designs,
             implementing smooth animations, or ensuring seamless user
             interactions, I bring ideas to life with precision and creativity.
-          </p>
+          </motion.p>
           <ul className="text-sm text-muted dark:text-gray-400 space-y-1">
             <li>✨ Expert in React, Tailwind CSS, and JavaScript ES6+</li>
             <li>✨ Strong focus on UI/UX principles and design systems</li>

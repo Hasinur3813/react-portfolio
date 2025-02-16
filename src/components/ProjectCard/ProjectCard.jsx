@@ -12,7 +12,7 @@ const ProjectCard = ({ project }) => {
     <>
       <div
         key={project.id}
-        className="bg-lightGray dark:bg-bg-dark rounded-2xl shadow-md group hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col"
+        className="bg-gradient-to-r from-bg-bg-lightGray to-bg-secondaryColor dark:bg-bg-dark rounded-2xl shadow-md group hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col"
       >
         {/* Animated Image */}
         <div className="relative overflow-hidden group">
