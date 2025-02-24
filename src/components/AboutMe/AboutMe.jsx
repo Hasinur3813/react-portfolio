@@ -36,7 +36,7 @@ const AboutMe = () => {
             Designing Digital Experiences That Inspire
           </motion.h2>
           <motion.p
-            variants={zoomOut}
+            variants={fadeDown}
             initial="hidden"
             whileInView="visible"
             className="text-lg dark:text-lightGray text-gray-800 leading-relaxed"
