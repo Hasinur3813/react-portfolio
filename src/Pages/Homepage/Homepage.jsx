@@ -11,9 +11,6 @@ import Skills from "../../components/Skills/Skills";
 const Homepage = () => {
   return (
     <div>
-      <p className="font-semibold text-3xl py-3 bg-white text-primaryColor animate-pulse">
-        Under Development
-      </p>
       <Hero />
       <AboutMe />
       <Education />
