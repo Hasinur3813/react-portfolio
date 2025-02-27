@@ -1,13 +1,18 @@
 const useAnimation = () => {
   return {
     fadeUp: {
-      hidden: { opacity: 0, y: 30 },
-      visible: {
+      hidden: { opacity: 0, y: 20 },
+      visible: (delay) => ({
         opacity: 1,
         y: 0,
-        transition: { duration: 0.5, ease: "easeInOut" },
-      },
+        transition: {
+          duration: 0.8,
+          delay: delay,
+          ease: "easeInOut",
+        },
+      }),
     },
+
     fadeDown: {
       hidden: { opacity: 0, y: -30 },
       visible: {
