@@ -1,4 +1,6 @@
 import { Divider } from "antd";
+import useAnimation from "../../hooks/useAnimation";
+import { motion } from "framer-motion";
 
 const skills = [
   {
@@ -27,23 +29,42 @@ const skills = [
 ];
 
 const Skills = () => {
+  const { fadeUp } = useAnimation();
   return (
     <section className="py-16 bg-white dark:bg-bg-dark ">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-text dark:text-lightGray">
+          <motion.h2
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            custom={0}
+            className="text-3xl font-bold text-text dark:text-lightGray"
+          >
             My Technical Skills
-          </h2>
-          <p className="text-text dark:text-lightGray mt-2">
+          </motion.h2>
+          <motion.p
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            custom={0.3}
+            className="text-text dark:text-lightGray mt-2"
+          >
             A comprehensive breakdown of my technical expertise.
-          </p>
+          </motion.p>
         </div>
 
         {/* Skills Cards */}
         <div className="flex flex-col  gap-y-2">
           {skills.map((skill, index) => (
-            <div key={index}>
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              custom={index * 0.3}
+              key={index}
+            >
               <Divider
                 orientation={skill.category === "Backend" ? "right" : "left"}
               >
@@ -66,7 +87,7 @@ const Skills = () => {
                   </p>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

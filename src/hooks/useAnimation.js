@@ -31,19 +31,23 @@ const useAnimation = () => {
     },
     slideFromRight: {
       hidden: { x: 100, opacity: 0 },
-      visible: {
+      visible: (delay) => ({
         x: 0,
         opacity: 1,
-        transition: { duration: 0.6, ease: "easeOut" },
-      },
+        transition: {
+          duration: 0.6,
+          delay: delay,
+          ease: "easeOut",
+        },
+      }),
     },
     zoomIn: {
       hidden: { scale: 0.5, opacity: 0 },
-      visible: {
+      visible: (delay) => ({
         scale: 1,
         opacity: 1,
-        transition: { duration: 0.5, ease: "easeOut" },
-      },
+        transition: { duration: 0.5, delay: delay, ease: "easeOut" },
+      }),
     },
     zoomOut: {
       hidden: { scale: 1.5, opacity: 0 },

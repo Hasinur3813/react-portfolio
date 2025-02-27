@@ -2,8 +2,11 @@ import { FaFacebook, FaGithub, FaLinkedin, FaXmark } from "react-icons/fa6";
 import Themes from "../Shared/Themes";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
+import { motion } from "framer-motion";
+import useAnimation from "../../hooks/useAnimation";
 
 const MobileMenu = ({ handleCloseMenu, showMobileMenu }) => {
+  const { slideFromRight, fadeUp, zoomIn } = useAnimation();
   const menuRef = useRef(null);
 
   const handleCloseMobileMenu = (e) => {
@@ -37,44 +40,81 @@ const MobileMenu = ({ handleCloseMenu, showMobileMenu }) => {
 
         {/* menu links */}
         <div>
-          <h3 className="text-base font-semibold">Menu</h3>
+          <motion.h3
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            custom={0}
+            className="text-base font-semibold"
+          >
+            Menu
+          </motion.h3>
 
           {/* nav links */}
           <ul className="mt-4 space-y-2 text-center font-semibold">
-            <li className="group">
+            <motion.li
+              variants={slideFromRight}
+              initial="hidden"
+              whileInView="visible"
+              custom={0}
+              className="group"
+            >
               <Link
                 to={"/"}
                 className="group-hover:text-primaryColor text-lg block rounded-md "
               >
                 Home
               </Link>
-            </li>
-            <li className="group">
+            </motion.li>
+            <motion.li
+              variants={slideFromRight}
+              initial="hidden"
+              whileInView="visible"
+              custom={0.1}
+              className="group"
+            >
               <Link
                 to={"/about-me"}
                 className="group-hover:text-primaryColor text-lg block rounded-md "
               >
                 About me
               </Link>
-            </li>
-            <li className="group">
+            </motion.li>
+            <motion.li
+              variants={slideFromRight}
+              initial="hidden"
+              whileInView="visible"
+              custom={0.2}
+              className="group"
+            >
               <Link
                 to={"/projects"}
                 className="group-hover:text-primaryColor text-lg block rounded-md "
               >
                 Projects
               </Link>
-            </li>
-            <li className="group">
+            </motion.li>
+            <motion.li
+              variants={slideFromRight}
+              initial="hidden"
+              whileInView="visible"
+              custom={0.3}
+              className="group"
+            >
               <Link
                 to={"/#contact"}
                 className="group-hover:text-primaryColor text-lg block rounded-md "
               >
                 Contact
               </Link>
-            </li>
+            </motion.li>
 
-            <li>
+            <motion.li
+              variants={zoomIn}
+              initial="hidden"
+              whileInView="visible"
+              custom={0}
+            >
               <Link to={"/contact"}>
                 <button
                   className="mt-5 w-full border-secondaryColor border text-lightGray bg-primaryColor hover:text-lightGray hover:bg-secondaryColor rounded-md px-4 py-2 text-lg font-semibold"
@@ -83,7 +123,7 @@ const MobileMenu = ({ handleCloseMenu, showMobileMenu }) => {
                   Hire me
                 </button>
               </Link>
-            </li>
+            </motion.li>
           </ul>
         </div>
 
@@ -93,27 +133,47 @@ const MobileMenu = ({ handleCloseMenu, showMobileMenu }) => {
         {/* social links */}
 
         <div className="mt-10">
-          <h3 className="text-base font-semibold">Social</h3>
+          <motion.h3
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            custom={0}
+            className="text-base font-semibold"
+          >
+            Social
+          </motion.h3>
           <div className="mt-5 flex space-x-8 text-3xl ">
-            <a
+            <motion.a
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              custom={0}
               href="https://github.com/Hasinur3813"
               className="hover:text-primaryColor shadow-primaryColor"
             >
               <FaGithub />
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              custom={0.1}
               href="https://www.linkedin.com/in/hasinur3813/"
               className=" hover:text-primaryColor"
             >
               <FaLinkedin />
-            </a>
+            </motion.a>
 
-            <a
+            <motion.a
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              custom={0.2}
               href="https://www.facebook.com/ha3813"
               className="hover:text-primaryColor"
             >
               <FaFacebook />
-            </a>
+            </motion.a>
           </div>
         </div>
       </div>
