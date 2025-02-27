@@ -1,7 +1,7 @@
 import { Card } from "antd";
-
+import { motion } from "framer-motion";
 import { FaGraduationCap } from "react-icons/fa";
-
+import useAnimation from "../../hooks/useAnimation";
 const educationData = [
   {
     degree: "Master of Social Science (MSS)",
@@ -22,19 +22,38 @@ const educationData = [
 ];
 
 const Education = () => {
+  const { fadeUp } = useAnimation();
   return (
     <section className="py-16 bg-offWhite dark:bg-bg-dark">
       <div className="container mx-auto px-5">
-        <h2 className="text-3xl font-bold text-center text-primaryColor dark:text-white">
+        <motion.h2
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          custom={0}
+          className="text-3xl font-bold text-center text-primaryColor dark:text-white"
+        >
           Education
-        </h2>
-        <p className="text-center text-gray-600 dark:text-gray-300 mt-2">
+        </motion.h2>
+        <motion.p
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          custom={0.3}
+          className="text-center text-gray-600 dark:text-gray-300 mt-2"
+        >
           My academic journey and qualifications.
-        </p>
+        </motion.p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
           {educationData.map((edu, idx) => (
-            <div key={idx}>
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              custom={idx * 0.5}
+              key={idx}
+            >
               <Card className="shadow-lg dark:bg-muted dark:border-gray-700">
                 <div className="flex items-center gap-4">
                   <FaGraduationCap className="text-primaryColor text-3xl" />
@@ -54,7 +73,7 @@ const Education = () => {
                   </div>
                 </div>
               </Card>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
