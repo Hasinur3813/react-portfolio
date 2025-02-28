@@ -6,14 +6,15 @@ const projects = [
     description:
       "EduTrial is a modern online learning platform designed to streamline class management and improve collaboration between students and instructors. Featuring secure authentication, role-based access control, and dynamic dashboards, it simplifies educational operations for all users. Focused on scalability, user experience, and efficiency, this platform is ideal for educational institutions and training centers.",
     features: [
-      "role-based access control",
-      "payment integration",
-      "class management",
-      "enrollment system",
-      "dashboard",
-      "image upload",
-      "search funcionality",
+      "Secure role-based access control",
+      "Seamless payment integration with Stripe",
+      "Comprehensive class management system",
+      "Automated student enrollment process",
+      "User-specific dashboards based on roles",
+      "Effortless image upload & management",
+      "Advanced search functionality with filters",
     ],
+
     technologies: [
       "react.js",
       "node.js",
@@ -48,10 +49,9 @@ const projects = [
     liveLink: "https://fir-learning-793eb.web.app",
     challenges: ["integration tanstack mutation", "dashboard layout desing"],
     improvements: [
-      "profile updating system",
-      "users chat services",
-      "payment history integration",
-      "live customer support",
+      "Enhanced profile update system with real-time validation",
+      "Integrated payment history tracking for user transparency",
+      "Live customer support for instant issue resolution",
     ],
   },
   {

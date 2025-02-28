@@ -42,11 +42,11 @@ const useAnimation = () => {
       }),
     },
     zoomIn: {
-      hidden: { scale: 0.5, opacity: 0 },
+      hidden: { scale: 0.8, opacity: 0 },
       visible: (delay) => ({
         scale: 1,
         opacity: 1,
-        transition: { duration: 0.5, delay: delay, ease: "easeOut" },
+        transition: { duration: 0.5, delay: delay, ease: "easeIn" },
       }),
     },
     zoomOut: {

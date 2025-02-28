@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
 import { Card, Button, Tag, Modal } from "antd";
-
+import { motion } from "framer-motion";
 import Section from "../../layout/Section";
 import projects from "../../utils/projects";
 import { useParams } from "react-router-dom";
-
+import useAnimation from "../../hooks/useAnimation";
 const ProjectDetails = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { id } = useParams();
   const [project, setProject] = useState({});
   const [loading, setLoading] = useState(true);
+  const { fadeUp, zoomIn } = useAnimation();
 
   useEffect(() => {
     const project = projects.find((proj) => proj.id === parseInt(id));
@@ -28,7 +29,13 @@ const ProjectDetails = () => {
 
   return (
     <Section className="py-16 mt-14 bg-offWhite dark:bg-darkGray ">
-      <div className="max-w-4xl mx-auto px-3">
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        animate="visible"
+        viewport={{ once: true }}
+        className="max-w-4xl mx-auto px-3"
+      >
         {/* Project Image - Click to View Fullscreen */}
         <div
           className="mb-6 relative cursor-pointer rounded-lg max-h-[500px] overflow-hidden"
@@ -58,6 +65,20 @@ const ProjectDetails = () => {
             </h3>
             <ul className="list-disc list-inside">
               {project.features.map((feature, i) => (
+                <li key={i} className="capitalize">
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* improvements */}
+          <div>
+            <h3 className="font-semibold text-primaryColor text-lg">
+              Improvements:
+            </h3>
+            <ul className="list-disc list-inside">
+              {project.improvements.map((feature, i) => (
                 <li key={i} className="capitalize">
                   {feature}
                 </li>
@@ -117,7 +138,7 @@ const ProjectDetails = () => {
             className="w-full h-auto rounded-lg"
           />
         </Modal>
-      </div>
+      </motion.div>
     </Section>
   );
 };

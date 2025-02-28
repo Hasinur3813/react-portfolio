@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import myPhoto from "../../assets/myPhoto.jpg";
 import PageHeader from "../../components/PageHeader/PageHeader";
-
+import { motion } from "framer-motion";
+import useAnimation from "../../hooks/useAnimation";
 const AboutMe = () => {
+  const { fadeUp } = useAnimation();
   return (
     <section className="py-16 md:mt-5 bg-lightGray dark:bg-darkGray">
       {/* heading */}
@@ -12,7 +14,13 @@ const AboutMe = () => {
       />
 
       {/* content */}
-      <div className="container mx-auto px-4 overflow-hidden">
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        animate="visible"
+        viewport={{ once: true }}
+        className="container mx-auto px-4 overflow-hidden"
+      >
         {/* top content */}
         <div className="flex flex-col md:flex-row justify-between gap-10 py-10 mt-14 lg:mt-20">
           <div className="md:w-1/2 w-full flex justify-center h-fit relative">
@@ -211,117 +219,9 @@ const AboutMe = () => {
             </li>
           </ul>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
 
 export default AboutMe;
-
-// import { Card } from "antd";
-// import { motion } from "framer-motion";
-
-// const AboutMe = () => {
-//   return (
-//     <div className="container mx-auto px-6 py-16">
-//       {/* Introduction */}
-//       <motion.div
-//         initial={{ opacity: 0, y: 50 }}
-//         animate={{ opacity: 1, y: 0 }}
-//         transition={{ duration: 0.5 }}
-//         className="text-center mb-12"
-//       >
-//         <h1 className="text-4xl font-bold text-gray-800">
-//           Hi, I'm [Your Name] 👋
-//         </h1>
-//         <p className="text-lg text-muted mt-4 max-w-2xl mx-auto">
-//           A passionate front-end developer with a keen eye for design and a love
-//           for crafting interactive web experiences.
-//         </p>
-//       </motion.div>
-
-//       <div className="grid md:grid-cols-2 gap-8">
-//         {/* My Journey */}
-//         <motion.div
-//           initial={{ opacity: 0, x: -50 }}
-//           animate={{ opacity: 1, x: 0 }}
-//           transition={{ duration: 0.5, delay: 0.2 }}
-//         >
-//           <Card className="p-6 shadow-lg">
-//             <h2 className="text-2xl font-semibold mb-4 text-primary">
-//               My Journey
-//             </h2>
-//             <p className="text-muted">
-//               My journey into web development started with curiosity and a
-//               passion for technology. Over the years, I honed my skills in
-//               front-end development, mastering technologies like React,
-//               Tailwind, and Framer Motion.
-//             </p>
-//           </Card>
-//         </motion.div>
-
-//         {/* Skills & Expertise */}
-//         <motion.div
-//           initial={{ opacity: 0, x: 50 }}
-//           animate={{ opacity: 1, x: 0 }}
-//           transition={{ duration: 0.5, delay: 0.4 }}
-//         >
-//           <Card className="p-6 shadow-lg">
-//             <h2 className="text-2xl font-semibold mb-4 text-primary">
-//               My Tech Stack
-//             </h2>
-//             <p className="text-muted">Technologies I work with:</p>
-//             <ul className="list-disc list-inside mt-3 text-muted">
-//               <li>React.js & Next.js</li>
-//               <li>Tailwind CSS & Ant Design</li>
-//               <li>Framer Motion for animations</li>
-//               <li>Node.js & Express.js (Basic Backend Knowledge)</li>
-//             </ul>
-//           </Card>
-//         </motion.div>
-//       </div>
-
-//       <div className="grid md:grid-cols-2 gap-8 mt-8">
-//         {/* How I Work */}
-//         <motion.div
-//           initial={{ opacity: 0, x: -50 }}
-//           animate={{ opacity: 1, x: 0 }}
-//           transition={{ duration: 0.5, delay: 0.6 }}
-//         >
-//           <Card className="p-6 shadow-lg">
-//             <h2 className="text-2xl font-semibold mb-4 text-primary">
-//               How I Work
-//             </h2>
-//             <p className="text-muted">
-//               My workflow involves deep research, planning, coding, and
-//               optimization. I believe in writing clean, scalable, and
-//               maintainable code to build high-quality web applications.
-//             </p>
-//           </Card>
-//         </motion.div>
-
-//         {/* Call to Action */}
-//         <motion.div
-//           initial={{ opacity: 0, x: 50 }}
-//           animate={{ opacity: 1, x: 0 }}
-//           transition={{ duration: 0.5, delay: 0.8 }}
-//         >
-//           <Card className="p-6 shadow-lg text-center">
-//             <h2 className="text-2xl font-semibold mb-4 text-primary">
-//               Let's Connect!
-//             </h2>
-//             <p className="text-muted mb-4">
-//               Looking to collaborate or hire me? Let's build something amazing
-//               together!
-//             </p>
-//             <button className="px-6 py-3 bg-primary text-white rounded-md shadow-md hover:bg-secondary transition">
-//               Contact Me
-//             </button>
-//           </Card>
-//         </motion.div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default AboutMe;
