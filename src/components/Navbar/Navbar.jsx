@@ -3,6 +3,7 @@ import MobileMenu from "./MobileMenu";
 import { useState } from "react";
 import MenuLink from "./Navlink";
 import { Link } from "react-router-dom";
+import resume from "../../assets/hasinur_rahman.pdf";
 
 const Navbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -18,7 +19,7 @@ const Navbar = () => {
         showMobileMenu={showMobileMenu}
       />
 
-      <div className="shadow-md bg-transparent dark:bg-bg-dark fixed top-12 w-full z-50 backdrop-blur-md">
+      <div className="shadow-md bg-transparent dark:bg-bg-dark fixed top-0 w-full z-50 backdrop-blur-lg">
         <div className="container mx-auto px-3">
           <div className="flex py-5 justify-between items-center">
             {/* navbar start */}
@@ -34,17 +35,17 @@ const Navbar = () => {
             <div className="flex items-center">
               <ul className=" space-x-4 text-base items-center hidden md:flex dark:text-lightGray">
                 <MenuLink path="/" text="Home" />
-                <MenuLink path="/projects" text="Project" />
+                <MenuLink path="/projects" text="Projects" />
                 <MenuLink path="/about-me" text="About Me" />
                 <MenuLink path="/contact" text="Contact" />
                 <li>
-                  <a href="#contact">
+                  <a href={resume} download="hasinur_rahman_resume.pdf">
                     <button
                       className="ms-4 border-secondaryColor border 
                     bg-primaryColor text-lightGray hover:bg-secondaryColor rounded-md px-4 py-2 text-lg font-semibold"
                       type="button"
                     >
-                      Hire me
+                      Get Resume
                     </button>
                   </a>
                 </li>

@@ -209,7 +209,7 @@ const AboutMe = () => {
                   Looking to collaborate or hire me? Let&apos;s build something
                   amazing together!
                 </p>
-                <Link to={"/#contact"}>
+                <Link to={"/contact"}>
                   <button className="px-6 py-3 bg-primaryColor text-white rounded-md shadow-md hover:bg-secondaryColor transition">
                     Contact Me
                   </button>
