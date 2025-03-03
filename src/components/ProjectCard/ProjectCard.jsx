@@ -12,14 +12,14 @@ const ProjectCard = ({ project }) => {
     <>
       <div
         key={project.id}
-        className="bg-gradient-to-r from-bg-bg-lightGray to-bg-secondaryColor dark:bg-bg-dark rounded-2xl shadow-md group hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col"
+        className=" dark:bg-bg-dark rounded-2xl shadow-md group hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col"
       >
         {/* Animated Image */}
-        <div className="relative overflow-hidden group">
+        <div className="relative group">
           <img
             src={project.image}
             alt={project.title}
-            className="h-auto w-full object-cover transform group-hover:scale-105 transition-transform duration-200 ease"
+            className="object-cover transform group-hover:scale-105 transition-transform duration-200 ease"
           />
         </div>
 

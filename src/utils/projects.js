@@ -146,6 +146,53 @@ const projects = [
       "integration text editor",
     ],
   },
+  {
+    id: 4,
+    title: "Crowdcube - A crowd funding application",
+    image: "https://i.ibb.co.com/NgQ7nGg3/crowdcube.png",
+    description:
+      "Crowdcube, a modern crowdfunding platform designed to connect individuals with meaningful campaigns. Whether you want to create your campaign or contribute to an existing one, Crowdcube makes it simple, transparent, and impactful.",
+    features: [
+      "User-Friendly Campaign Management",
+      "Running Campaigns Highlighted",
+      "All User Campaigns in One Place",
+      "Secure and Transparent Donation System",
+      "Deadline Awareness",
+    ],
+    technologies: [
+      "react",
+      "taiwind css",
+      "React Icons",
+      "React Tooltip",
+      "firebase",
+      "React Awesome Reveal",
+      "Swiper.js",
+      "Express.js",
+      "MongoDB",
+    ],
+    "main-technologies": [
+      "react",
+      "taiwind css",
+      "firebase",
+      "express.js",
+      "mongodb",
+    ],
+    github: {
+      client: "https://github.com/Hasinur3813/crowd-funding-client",
+      server: "",
+    },
+    liveLink: "https://crowd-funding-pltatform.web.app",
+    challenges: [
+      "CRUD operation with firebase firestore",
+      "sidebar integration",
+      "image upload to the firebase storage",
+    ],
+    improvements: [
+      "profile updating system",
+      "implementation a professional modal",
+      "integration text editor",
+    ],
+  },
 ];
 
 export default projects;
