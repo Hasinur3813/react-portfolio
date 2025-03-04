@@ -10,7 +10,7 @@ const ProjectDetails = () => {
   const { id } = useParams();
   const [project, setProject] = useState({});
   const [loading, setLoading] = useState(true);
-  const { fadeUp, zoomIn } = useAnimation();
+  const { fadeUp } = useAnimation();
 
   useEffect(() => {
     const project = projects.find((proj) => proj.id === parseInt(id));
@@ -74,11 +74,25 @@ const ProjectDetails = () => {
 
           {/* improvements */}
           <div>
-            <h3 className="font-semibold text-primaryColor text-lg">
+            <h3 className="font-semibold text-primaryColor mt-4 text-lg">
               Improvements:
             </h3>
             <ul className="list-disc list-inside">
               {project.improvements.map((feature, i) => (
+                <li key={i} className="capitalize">
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* challenges faced */}
+          <div>
+            <h3 className="font-semibold mt-4 text-primaryColor text-lg">
+              Challenges Faced During Development:
+            </h3>
+            <ul className="list-disc list-inside">
+              {project.challenges.map((feature, i) => (
                 <li key={i} className="capitalize">
                   {feature}
                 </li>

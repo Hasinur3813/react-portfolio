@@ -47,10 +47,10 @@ const projects = [
       server: "",
     },
     liveLink: "https://fir-learning-793eb.web.app",
-    challenges: ["integration tanstack mutation", "dashboard layout desing"],
+    challenges: ["Integration tanstack mutation", "Dashboard layout desing"],
     improvements: [
-      "Enhanced profile update system with real-time validation",
-      "Integrated payment history tracking for user transparency",
+      "Enhance profile update system with real-time validation",
+      "Integrate payment history tracking for user transparency",
       "Live customer support for instant issue resolution",
     ],
   },
@@ -182,15 +182,11 @@ const projects = [
       server: "",
     },
     liveLink: "https://crowd-funding-pltatform.web.app",
-    challenges: [
-      "CRUD operation with firebase firestore",
-      "sidebar integration",
-      "image upload to the firebase storage",
-    ],
+    challenges: [],
     improvements: [
-      "profile updating system",
-      "implementation a professional modal",
-      "integration text editor",
+      "Real time donation system",
+      "Integration dashboard layout",
+      "Role base access control.",
     ],
   },
 ];
