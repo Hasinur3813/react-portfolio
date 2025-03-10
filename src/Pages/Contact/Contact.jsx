@@ -1,5 +1,6 @@
-import { Form, Input, Button, notification } from "antd";
-import { useState } from "react";
+import { Form, Input, Button, notification, message } from "antd";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 import grid from "../../assets/dot-grid.png";
 
@@ -8,17 +9,32 @@ import ContactInfo from "../../components/ContactInfo/ContactInfo";
 const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [form] = Form.useForm();
+  const formRef = useRef(null);
+  const service_id = import.meta.env.VITE_EMAIL_SERVICE_ID;
+  const template_id = import.meta.env.VITE_EMAIL_TEMPLATE_ID;
+  const public_key = import.meta.env.VITE_EMAIL_PUBLIC_KEY;
 
-  const onFinish = (values) => {
-    setLoading(true);
-    setTimeout(() => {
-      notification.success({
-        message: "Thank you for your message!",
+  const onFinish = async (values) => {
+    try {
+      setLoading(true);
+      const res = await emailjs.send(
+        service_id,
+        template_id,
+        values,
+        public_key
+      );
+      if (res.status === "200") {
+        notification.success({
+          message: "Thank you for your message!",
+        });
+      }
+    } catch {
+      notification.error({
+        message: "Message send failed!",
       });
+    } finally {
       setLoading(false);
-      form.resetFields();
-    }, 3000);
-    console.log("Form values:", values);
+    }
   };
 
   const onFinishFailed = (errorInfo) => {
@@ -46,6 +62,7 @@ const Contact = () => {
           {/* contact form */}
           <div className="w-full ">
             <Form
+              ref={formRef}
               name="contact-form"
               layout="vertical"
               form={form}
