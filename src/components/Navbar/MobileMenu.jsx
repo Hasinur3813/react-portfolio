@@ -1,9 +1,10 @@
 import { FaFacebook, FaGithub, FaLinkedin, FaXmark } from "react-icons/fa6";
 import Themes from "../Shared/Themes";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import useAnimation from "../../hooks/useAnimation";
+import resume from "../../assets/hasinur_rahman.pdf";
 
 const MobileMenu = ({ handleCloseMenu, showMobileMenu }) => {
   const { slideFromRight, fadeUp, zoomIn } = useAnimation();
@@ -59,12 +60,12 @@ const MobileMenu = ({ handleCloseMenu, showMobileMenu }) => {
               custom={0}
               className="group"
             >
-              <Link
+              <NavLink
                 to={"/"}
                 className="group-hover:text-primaryColor text-lg block rounded-md "
               >
                 Home
-              </Link>
+              </NavLink>
             </motion.li>
             <motion.li
               variants={slideFromRight}
@@ -73,12 +74,12 @@ const MobileMenu = ({ handleCloseMenu, showMobileMenu }) => {
               custom={0.1}
               className="group"
             >
-              <Link
+              <NavLink
                 to={"/about-me"}
                 className="group-hover:text-primaryColor text-lg block rounded-md "
               >
                 About me
-              </Link>
+              </NavLink>
             </motion.li>
             <motion.li
               variants={slideFromRight}
@@ -87,12 +88,12 @@ const MobileMenu = ({ handleCloseMenu, showMobileMenu }) => {
               custom={0.2}
               className="group"
             >
-              <Link
+              <NavLink
                 to={"/projects"}
                 className="group-hover:text-primaryColor text-lg block rounded-md "
               >
                 Projects
-              </Link>
+              </NavLink>
             </motion.li>
             <motion.li
               variants={slideFromRight}
@@ -101,12 +102,12 @@ const MobileMenu = ({ handleCloseMenu, showMobileMenu }) => {
               custom={0.3}
               className="group"
             >
-              <Link
+              <NavLink
                 to={"/#contact"}
                 className="group-hover:text-primaryColor text-lg block rounded-md "
               >
                 Contact
-              </Link>
+              </NavLink>
             </motion.li>
 
             <motion.li
@@ -115,14 +116,14 @@ const MobileMenu = ({ handleCloseMenu, showMobileMenu }) => {
               whileInView="visible"
               custom={0}
             >
-              <Link to={"/contact"}>
+              <a href={resume} download="hasiur_rahman.pdf">
                 <button
                   className="mt-5 w-full border-secondaryColor border text-lightGray bg-primaryColor hover:text-lightGray hover:bg-secondaryColor rounded-md px-4 py-2 text-lg font-semibold"
                   type="button"
                 >
-                  Hire me
+                  Get Resume
                 </button>
-              </Link>
+              </a>
             </motion.li>
           </ul>
         </div>
