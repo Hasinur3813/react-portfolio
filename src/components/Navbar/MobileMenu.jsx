@@ -103,7 +103,7 @@ const MobileMenu = ({ handleCloseMenu, showMobileMenu }) => {
               className="group"
             >
               <NavLink
-                to={"/#contact"}
+                to={"/contact"}
                 className="group-hover:text-primaryColor text-lg block rounded-md "
               >
                 Contact
