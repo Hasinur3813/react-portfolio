@@ -1,4 +1,4 @@
-import { Form, Input, Button, notification, message } from "antd";
+import { Form, Input, Button, notification } from "antd";
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 
@@ -23,14 +23,18 @@ const Contact = () => {
         values,
         public_key
       );
-      if (res.status === "200") {
+
+      if (res.status === 200) {
+        console.log(res);
         notification.success({
-          message: "Thank you for your message!",
+          message: "Success",
+          description: "Thank you for your message!",
         });
       }
     } catch {
       notification.error({
-        message: "Message send failed!",
+        message: "Failed!",
+        description: "Failed to send message.",
       });
     } finally {
       setLoading(false);
