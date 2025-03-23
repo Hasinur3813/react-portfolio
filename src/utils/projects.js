@@ -189,6 +189,42 @@ const projects = [
       "Role base access control.",
     ],
   },
+  {
+    id: 5,
+    title: "Winte Donation - A winter clothing donation app",
+    image: "https://i.ibb.co.com/vCXL2w6s/winter-clothing-web-app.png",
+    description:
+      "This project was created to facilitate winter clothing donations and streamline the process of connecting donors and recipients. It allows users to donate, volunteer, and participate in campaigns to make a difference in the lives of underprivileged individuals across Bangladesh.",
+    features: [
+      "Secure user authentication and authorization",
+      "User-friendly donation process",
+      "friendly campaign management",
+      "user dashboard",
+    ],
+    technologies: [
+      "react",
+      "taiwind css",
+      "react icons",
+      "firebase",
+      "react awesome reveal",
+      "swiper.js",
+      "react-toastify",
+    ],
+    "main-technologies": ["react", "taiwind css", "firebase"],
+    github: {
+      client: "https://github.com/Hasinur3813/winter-clothing",
+      server: "",
+    },
+    liveLink: "https://winter-clothing.web.app",
+    challenges: [],
+    improvements: [
+      "Connect with backend",
+      "Real time donation system",
+      "Integration dashboard layout",
+      "Role base access control.",
+      "Integration of payment gateway",
+    ],
+  },
 ];
 
 export default projects;

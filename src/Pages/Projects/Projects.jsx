@@ -1,3 +1,4 @@
+import { Alert } from "antd";
 import PageHeader from "../../components/PageHeader/PageHeader";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import projects from "../../utils/projects";
@@ -24,6 +25,12 @@ const Projects = () => {
               <ProjectCard project={project} />
             </motion.div>
           ))}
+        </div>
+
+        {/* message */}
+        <div className="mt-10 max-w-md mx-auto">
+          {" "}
+          <Alert message="More Projects to be Added" type="info" showIcon />
         </div>
       </div>
     </section>

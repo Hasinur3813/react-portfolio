@@ -19,7 +19,7 @@ const ProjectCard = ({ project }) => {
           <img
             src={project.image}
             alt={project.title}
-            className="object-cover transform group-hover:scale-105 transition-transform duration-200 ease"
+            className="h-64 w-full object-cover transform group-hover:scale-105 transition-transform duration-200 ease"
           />
         </div>
 
