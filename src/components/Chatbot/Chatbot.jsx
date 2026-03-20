@@ -4,6 +4,7 @@ import { FaComments } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import profile from "../../data/profile.json";
 import projects from "../../utils/projects";
+import ReactMarkdown from "react-markdown";
 
 const Chatbot = () => {
   const [open, setOpen] = useState(false);
@@ -99,6 +100,9 @@ You are a professional AI portfolio assistant for Hasinur Rahman.
 📊 HOW TO ANSWER:
 - Keep answers short and structured
 - Use bullet points if helpful
+- Short paragraphs
+- Line breaks between sections
+- Clean and readable structure
 - Highlight skills and technologies when relevant
 - If asked about projects → explain clearly + mention tech stack
 - If asked about skills → group them nicely
@@ -178,13 +182,13 @@ ${question}
             {messages.map((msg, i) => (
               <div
                 key={i}
-                className={`max-w-[78%] px-3 py-2 rounded-2xl text-sm leading-relaxed break-words whitespace-pre-wrap ${
+                className={`max-w-[78%] px-3 py-2 rounded-2xl text-sm leading-relaxed break-words prose prose-sm  dark:prose-invert ${
                   msg.role === "user"
                     ? "ml-auto bg-blue-500 text-white"
                     : "bg-slate-100 text-slate-800 dark:bg-slate-700 dark:text-slate-100"
                 }`}
               >
-                {msg.text}
+                <ReactMarkdown>{msg.text}</ReactMarkdown>
               </div>
             ))}
 
@@ -230,14 +234,32 @@ ${question}
       )}
 
       {/* Floating Button */}
-      <button
-        onClick={() => setOpen((prev) => !prev)}
-        title="AI Assistant"
-        className="fixed bottom-20 md:bottom-36 right-5 z-[100] w-12 h-12 rounded-full bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center shadow-xl border border-white/50 transition-all duration-200"
-        aria-label="Toggle chat"
-      >
-        {open ? <IoClose size={24} /> : <FaComments size={22} />}
-      </button>
+      <div className="fixed bottom-20 md:bottom-36 right-5 z-[100]">
+        {/* Ping Glow */}
+        {!open && (
+          <span
+            className="absolute left-2 top-2
+      w-10 h-10 rounded-full bg-indigo-500  animate-ping 
+      pointer-events-none"
+          />
+        )}
+
+        {/* Main Button */}
+        <button
+          onClick={() => setOpen((prev) => !prev)}
+          title="AI Assistant"
+          aria-label="Toggle chat"
+          className="relative w-14 h-14 rounded-full 
+    bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
+    text-white flex items-center justify-center 
+    shadow-xl border border-white/20
+    transition-all duration-300
+
+    hover:scale-110 active:scale-95"
+        >
+          {open ? <IoClose size={24} /> : <FaComments size={22} />}
+        </button>
+      </div>
     </>
   );
 };

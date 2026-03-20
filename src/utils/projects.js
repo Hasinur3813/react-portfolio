@@ -40,7 +40,7 @@ const projects = [
     ],
 
     github: {
-      client: "https://github.com/your-username/eshop-frontend",
+      client: "https://github.com/Hasinur3813/eshop",
       server: "",
     },
 
@@ -54,9 +54,7 @@ const projects = [
     ],
 
     improvements: [
-      "Integrate user authentication and order history",
-      "Add wishlist and product comparison features",
-      "Implement payment gateway integration",
+      "Product comparison features",
       "Improve SEO and performance optimization",
     ],
     createdAt: "2026-03-20",
