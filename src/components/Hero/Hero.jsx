@@ -66,7 +66,7 @@ const Hero = () => {
             >
               <Button
                 type="primary"
-                className="group flex gap-2 items-center px-6 py-6 hover:!bg-primaryColor border-primaryColor font-semibold text-lg rounded-md shadow-md hover:shadow-xl transition-shadow duration-200 bg-offWhite text-primaryColor"
+                className="group flex gap-2 z-10 items-center px-6 py-6 hover:!bg-primaryColor border-primaryColor font-semibold text-lg rounded-md shadow-md hover:shadow-xl transition-shadow duration-200 bg-offWhite text-primaryColor"
               >
                 <FaDownload className="group-hover:animate-bounce" />
                 <span>Get Resume</span>

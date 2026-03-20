@@ -146,7 +146,7 @@ ${question}
 
       setMessages((prev) => [...prev, { role: "bot", text }]);
     } catch (err) {
-      setError("Something went wrong. Please try again.");
+      setError("Something went wrong. Come back later or contact directly.");
       setMessages((prev) => [
         ...prev,
         { role: "bot", text: "Sorry, I couldn't process that. Please retry." },
@@ -198,7 +198,7 @@ ${question}
           </div>
 
           {error && (
-            <div className="px-3 py-2 bg-red-50 border border-red-200 text-red-700 text-xs">
+            <div className=" px-3 py-2 bg-red-50 border border-red-200 text-red text-xs">
               {error}
             </div>
           )}
@@ -233,7 +233,7 @@ ${question}
       <button
         onClick={() => setOpen((prev) => !prev)}
         title="AI Assistant"
-        className="fixed bottom-36 right-5 z-[100] w-12 h-12 rounded-full bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center shadow-xl border border-white/50 transition-all duration-200"
+        className="fixed bottom-20 md:bottom-36 right-5 z-[100] w-12 h-12 rounded-full bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center shadow-xl border border-white/50 transition-all duration-200"
         aria-label="Toggle chat"
       >
         {open ? <IoClose size={24} /> : <FaComments size={22} />}
