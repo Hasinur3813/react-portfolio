@@ -1,5 +1,132 @@
 const projects = [
   {
+    id: 833,
+    title: "E-Shop – Modern E-commerce Frontend",
+    image: "https://i.ibb.co.com/rGYhyrCy/eshop-frontend.png",
+    description:
+      "E-Shop is a modern and responsive e-commerce frontend application designed to deliver a seamless shopping experience. It features dynamic product browsing, cart management, and smooth navigation powered by React and Vite. With optimized state management and clean UI design, the platform ensures high performance, scalability, and an engaging user experience across devices.",
+
+    features: [
+      "Dynamic product listing with category filtering",
+      "Add to cart & cart management system",
+      "Responsive and mobile-friendly UI",
+      "Smooth product slider using Swiper.js",
+      "User-friendly form handling with validation",
+      "Toast notifications for real-time feedback",
+      "Reusable and modular component structure",
+    ],
+
+    technologies: [
+      "react.js",
+      "vite",
+      "redux toolkit",
+      "react-redux",
+      "react-router",
+      "tailwind css",
+      "axios",
+      "react hook form",
+      "react toastify",
+      "swiper.js",
+      "lucide icons",
+      "react icons",
+    ],
+
+    "main-technologies": [
+      "react.js",
+      "redux toolkit",
+      "tailwind css",
+      "vite",
+      "axios",
+    ],
+
+    github: {
+      client: "https://github.com/your-username/eshop-frontend",
+      server: "",
+    },
+
+    liveLink: "https://eshop-eight-coral.vercel.app",
+
+    challenges: [
+      "Managing global cart state efficiently using Redux Toolkit",
+      "Optimizing performance for large product lists",
+      "Implementing smooth UI/UX with Swiper and animations",
+      "Handling form validation and error states properly",
+    ],
+
+    improvements: [
+      "Integrate user authentication and order history",
+      "Add wishlist and product comparison features",
+      "Implement payment gateway integration",
+      "Improve SEO and performance optimization",
+    ],
+    createdAt: "2026-03-20",
+    active: true,
+  },
+  {
+    id: 22,
+    title: "E-Shop Admin Dashboard",
+    image: "https://i.ibb.co.com/cctPrjWB/eshop-admin.png",
+    description:
+      "E-Shop Admin Dashboard is a powerful and scalable admin panel designed for managing e-commerce operations efficiently. It provides real-time analytics, order tracking, product management, and user control in a clean and responsive interface. Built with modern frontend tools and optimized state management, it ensures high performance and seamless user experience for administrators.",
+
+    features: [
+      "Advanced admin dashboard with real-time analytics",
+      "Comprehensive product & category management system",
+      "Order tracking and status management",
+      "User management with role-based access",
+      "Sales reports with PDF export functionality",
+      "Interactive charts and data visualization",
+      "Responsive UI optimized for all devices",
+    ],
+
+    technologies: [
+      "react.js",
+      "vite",
+      "redux toolkit",
+      "react-redux",
+      "react-router",
+      "tailwind css",
+      "axios",
+      "react hook form",
+      "react hot toast",
+      "recharts",
+      "html2canvas",
+      "jspdf",
+      "react icons",
+    ],
+
+    "main-technologies": [
+      "react.js",
+      "redux toolkit",
+      "tailwind css",
+      "vite",
+      "axios",
+    ],
+
+    github: {
+      client: "https://github.com/Hasinur3813/eshop-admin",
+      server: "",
+    },
+
+    liveLink: "https://eshop-admin-gamma.vercel.app",
+
+    challenges: [
+      "Managing complex global state with Redux Toolkit",
+      "Implementing dynamic charts with Recharts",
+      "Generating downloadable reports using jsPDF and html2canvas",
+      "Handling form validation efficiently with React Hook Form",
+    ],
+
+    improvements: [
+      "Add real-time notifications for order updates",
+      "Integrate role-based permission system for advanced admin control",
+      "Implement dark mode for better user experience",
+      "Add multi-language support for global usability",
+    ],
+    createdAt: "2026-03-18",
+    active: true,
+  },
+  {
     id: 1,
     title: "EduTrial the online learning Platform",
     image: "https://i.ibb.co.com/Cp18JmQM/edutrial.png",
@@ -53,6 +180,8 @@ const projects = [
       "Integrate payment history tracking for user transparency",
       "Live customer support for instant issue resolution",
     ],
+    createdAt: "2025-03-20",
+    active: true,
   },
   {
     id: 2,
@@ -102,6 +231,8 @@ const projects = [
       "users chat services",
       "live customer support",
     ],
+    createdAt: "2025-06-20",
+    active: true,
   },
   {
     id: 3,
@@ -145,6 +276,8 @@ const projects = [
       "implementation a professional modal",
       "integration text editor",
     ],
+    createdAt: "2025-04-10",
+    active: true,
   },
   {
     id: 4,
@@ -188,6 +321,8 @@ const projects = [
       "Integration dashboard layout",
       "Role base access control.",
     ],
+    createdAt: "2026-07-20",
+    active: true,
   },
   {
     id: 5,
@@ -224,6 +359,8 @@ const projects = [
       "Role base access control.",
       "Integration of payment gateway",
     ],
+    createdAt: "2025-04-10",
+    active: true,
   },
 ];
 

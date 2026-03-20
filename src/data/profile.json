@@ -1,0 +1,93 @@
+{
+  "name": "Hasinur Rahman",
+  "title": "Full Stack MERN Developer",
+  "tagline": "Building scalable, high-performance web applications with clean UI/UX",
+
+  "bio": "I am a passionate Full Stack Developer specializing in the MERN stack. I focus on building modern, responsive, and user-friendly web applications using MERN Stack. I enjoy solving real-world problems and continuously improving my skills through hands-on projects.",
+
+  "summary": "I develop high-performance web applications with a strong focus on clean architecture, maintainability, and user experience. I aim to write scalable and efficient code while delivering visually appealing interfaces.",
+
+  "experienceLevel": "Junior to Mid-level (2+ years of hands-on development experience)",
+
+  "locations": "Pabna, Rajshahi, Bangladesh",
+  "availability": "Open to remote and onsite opportunities",
+
+  "contact": {
+    "email": "hasinur3812@gmail.com",
+    "github": "https://github.com/Hasinur3813",
+    "portfolio": "https://hasinur.netlify.app",
+    "linkedin": "https://linkedin.com/in/hasinur3813"
+  },
+
+  "skills": {
+    "frontend": [
+      "React",
+      "Next.js",
+      "JavaScript (ES6+)",
+      "Tailwind CSS",
+      "HTML5",
+      "CSS3",
+      "Vite",
+      "Redux",
+      "TypeScript",
+      "Framer Motion",
+      "React Router",
+      "Axios",
+      "React-hook-form"
+    ],
+    "backend": ["Node.js", "Express.js", "MongoDB", "Firebase"],
+    "tools": ["Git", "GitHub", "VS Code", "Postman", "Chrome DevTools"],
+    "concepts": [
+      "REST API",
+      "Authentication & Authorization",
+      "Responsive Design",
+      "State Management",
+      "Component-Based Architecture"
+    ]
+  },
+
+  "strengths": [
+    "Strong problem-solving mindset",
+    "Clean and maintainable code practices",
+    "UI/UX focused development",
+    "Fast learner and adaptable",
+    "Good understanding of full-stack workflows"
+  ],
+
+  "education": [
+    {
+      "degree": "Master of Social Science (MSS) in Economics",
+      "institution": "National University, Bangladesh",
+      "year": "2024",
+      "details": "Focused on advanced economic theories, research methodologies, and data analysis. Developed strong analytical and problem-solving skills applicable to real-world scenarios."
+    },
+    {
+      "degree": "Bachelor of Social Science (BSS) in Economics",
+      "institution": "National University, Bangladesh",
+      "year": "2022",
+      "details": "Studied core economic principles, statistics, and quantitative analysis. Built a solid foundation in analytical thinking and data interpretation."
+    }
+  ],
+
+  "workingStyle": {
+    "approach": "I prefer writing clean, reusable components and following scalable architecture patterns.",
+    "teamwork": "Comfortable working in teams and collaborating using Git workflows.",
+    "learning": "Continuously learning new technologies and improving development practices."
+  },
+
+  "goals": [
+    "Become a highly skilled full-stack engineer",
+    "Work on impactful real-world products",
+    "Contribute to open-source projects",
+    "Master system design and scalable architecture"
+  ],
+
+  "languages": ["English (Conversational)", "Bengali (Native)"],
+
+  "interests": [
+    "Web development",
+    "UI/UX design",
+    "Learning new technologies",
+    "Building side projects"
+  ]
+}
