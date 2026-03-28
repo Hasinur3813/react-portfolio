@@ -1,5 +1,77 @@
 const projects = [
   {
+    id: 834,
+    title: "Vital Flow – Blood Donation Platform",
+    image: "https://i.ibb.co.com/WWJP13NS/vital-Flow.png", // replace with actual screenshot
+    description:
+      "Vital Flow is a full-stack blood donation platform built to bridge the gap between donors and patients in urgent need. It features real-time donor discovery with map-based location search, emergency blood request posting, and a smart donor-matching system based on blood group and proximity. Built with Next.js 16 and a clean, accessible UI, the platform ensures a seamless experience across all devices.",
+
+    features: [
+      "Donor search with real-time map view using Leaflet & React Leaflet",
+      "Emergency blood request posting with urgency levels",
+      "Smart donor matching by blood group, city, and availability",
+      "Donor profile with verification badge and donation history",
+      "Secure authentication with NextAuth.js",
+      "Contact donor via WhatsApp with pre-filled message",
+      "User dashboard with stats, availability toggle, and request management",
+      "Settings page with notification, privacy, and account controls",
+      "Form validation with React Hook Form and Zod schemas",
+      "Fully responsive design optimized for mobile and desktop",
+    ],
+
+    technologies: [
+      "next.js",
+      "react",
+      "typescript",
+      "tailwind css",
+      "next-auth",
+      "react hook form",
+      "zod",
+      "zustand",
+      "leaflet",
+      "react-leaflet",
+      "lucide-react",
+      "clsx",
+      "tailwind-merge",
+      "zod",
+    ],
+
+    "main-technologies": [
+      "next.js",
+      "typescript",
+      "tailwind css",
+      "next-auth",
+      "zustand",
+    ],
+
+    github: {
+      client: "https://github.com/Hasinur3813/zbb-blood-donation-app", // replace
+      server: "",
+    },
+
+    liveLink: "https://zbb-blood-donation-app.vercel.app/", // replace
+
+    challenges: [
+      "Implementing real-time map-based donor search with React Leaflet and dynamic markers",
+      "Designing a smart donor-matching algorithm based on blood group compatibility and location proximity",
+      "Managing complex global state across dashboard, settings, and requests using Zustand",
+      "Building a fully responsive UI that works seamlessly from 320px to large desktop screens",
+      "Integrating NextAuth.js with protected routes and session-based access control",
+      "Structuring scalable form validation with Zod schemas shared across multiple pages",
+    ],
+
+    improvements: [
+      "Real-time push notifications for nearby emergency requests",
+      "In-app chat between donor and requester",
+      "Admin dashboard for request moderation and donor verification",
+      "Blood bank and hospital partnership integration",
+      "Mobile app with React Native",
+    ],
+
+    createdAt: "2026-03-28",
+    active: true,
+  },
+  {
     id: 833,
     title: "E-Shop – Modern E-commerce Frontend",
     image: "https://i.ibb.co.com/rGYhyrCy/eshop-frontend.png",
